@@ -84,6 +84,24 @@
             margin-top: 40px;
         }
         .update-time { color: #00d4ff; }
+        .date-divider {
+            text-align: center;
+            margin: 30px 0;
+            color: #666;
+            font-size: 0.9em;
+            position: relative;
+        }
+        .date-divider::before,
+        .date-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+        .date-divider::before { left: 0; }
+        .date-divider::after { right: 0; }
     </style>
 </head>
 <body>
@@ -95,7 +113,7 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">6</div>
+                <div class="stat-number" id="total-events">8</div>
                 <div class="stat-label">今日事件数</div>
             </div>
             <div class="stat-card">
@@ -103,7 +121,7 @@
                 <div class="stat-label">分析帖子总数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">67%</div>
+                <div class="stat-number" id="positive-rate">75%</div>
                 <div class="stat-label">积极讨论占比</div>
             </div>
         </div>
@@ -113,58 +131,149 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 03:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 04:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
 
     <script>
-        // X Events Archive Data
+        // X Events Archive Data - Historical + Today's Events
         const X_EVENTS_ARCHIVE = [
+    // ========== 2026-02-26 (Today) ==========
     {
-        "id": "evt_20260226_001",
+        "id": "evt_20260226_openclaw",
         "date": "2026-02-26",
         "category": "OpenClaw 生态",
         "icon": "🦞",
+        "title": "OpenClaw 生态大爆发",
+        "summary": "OpenClaw 生态今日迎来多款重磅产品发布：MaxClaw（MiniMax Agent × M2.5 集成，支持 Telegram/WhatsApp/Slack/Discord 7×24 运行）、MacClaw（Raycast 风格 macOS 客户端，覆盖 IDE/浏览器/幻灯片）、Toggle（让 Agent 实时看到用户的网页活动）、以及 Tamagotchi 风格的 OpenClaw 演示。社区热情高涨，生态快速扩张。",
+        "posts_count": 6,
+        "sentiment": "positive",
+        "sentiment_label": "极度兴奋",
+        "tags": ["OpenClaw", "AI Agent", "MiniMax", "开发者工具", "生态"],
+        "sources": ["@Scobleizer", "@MiniMaxAgent", "@tokifyi", "@0xPeLpA", "@itsnex1s"]
+    },
+    {
+        "id": "evt_20260226_coding",
+        "date": "2026-02-26",
+        "category": "AI 编程工具",
+        "icon": "💻",
+        "title": "AI 编程工具变革加速",
+        "summary": "AI 编程领域迎来重大变革：Karpathy 发文称过去 2 个月编程因 AI 发生巨变；Ahmad Awais 宣布融资 500 万美元开发能学习用户编码风格的 Agent；Cursor AI 展示 Agent 发送 Demo 的新功能；Pair Programmer 推出能看屏幕、听思考的 Claude Code 增强版；Google Flow 重新设计并推出。行业正经历从辅助到自主的跃迁。",
+        "posts_count": 5,
+        "sentiment": "positive",
+        "sentiment_label": "积极热议",
+        "tags": ["AI编程", "Cursor", "Claude", "开发者工具", "融资"],
+        "sources": ["@Scobleizer", "@karpathy", "@MrAhmadAwais", "@ashu_trv", "@joshwoodward"]
+    },
+    {
+        "id": "evt_20260226_robotics",
+        "date": "2026-02-26",
+        "category": "AI 机器人",
+        "icon": "🤖",
+        "title": "AI 机器人与智能体实用化",
+        "summary": "AI 机器人领域取得多项突破：GEAR 团队训练人形机器人取得里程碑进展，人类数据在人形机器人上变得更有用；Google 展示 Gemini 3 Flash 与 VLA 模型结合教机器人下棋；Basis 正在构建 AI 会计师，实现长期任务代理。Perplexity Computer 统一所有 AI 能力于一个系统，可研究、设计、执行。",
+        "posts_count": 4,
+        "sentiment": "positive",
+        "sentiment_label": "积极进展",
+        "tags": ["机器人", "Gemini", "Perplexity", "AI Agent", "VLA"],
+        "sources": ["@Scobleizer", "@danfei_xu", "@googleaidevs", "@vkhosla", "@perplexity_ai"]
+    },
+    {
+        "id": "evt_20260226_gaming",
+        "date": "2026-02-26",
+        "category": "AI 游戏",
+        "icon": "🎮",
+        "title": "AI 世界模型与游戏",
+        "summary": "AI 游戏领域出现新突破：开发者声称已用 LLM 解决游戏世界建模问题，使用 Three.js 技术；Scoble 评论称这是与其他世界模型截然不同的方向，更专注于游戏。这标志着 LLM 在游戏生成和交互方面的新应用方向。",
+        "posts_count": 2,
+        "sentiment": "positive",
+        "sentiment_label": "创新突破",
+        "tags": ["AI游戏", "世界模型", "LLM", "Three.js", "生成式AI"],
+        "sources": ["@Scobleizer", "@alightinastorm"]
+    },
+    {
+        "id": "evt_20260226_vr",
+        "date": "2026-02-26",
+        "category": "VR/AR",
+        "icon": "🥽",
+        "title": "Apple Vision Pro 怀旧街机体验",
+        "summary": "Apple Vision Pro 迎来 Retrocade 应用，提供怀旧的虚拟 1980 年代街机体验，被评价为 VR 游戏玩家期待已久的体验。展现了空间计算在娱乐领域的潜力。",
+        "posts_count": 1,
+        "sentiment": "positive",
+        "sentiment_label": "积极评价",
+        "tags": ["Vision Pro", "VR", "游戏", "苹果", "空间计算"],
+        "sources": ["@Scobleizer", "@UploadVR"]
+    },
+    {
+        "id": "evt_20260226_productivity",
+        "date": "2026-02-26",
+        "category": "生产力工具",
+        "icon": "📝",
+        "title": "AI 生产力工具创新",
+        "summary": "生产力工具领域持续创新：Genspark AI Inbox 推出自定义工作流，让 AI 自动分类邮件；开发者批评当前笔记应用过度捕捉无意义内容，呼吁更智能的记录方式。",
+        "posts_count": 2,
+        "sentiment": "neutral",
+        "sentiment_label": "中性讨论",
+        "tags": ["生产力", "AI工具", "邮件", "笔记"],
+        "sources": ["@Scobleizer", "@genspark_ai", "@huang_song_"]
+    },
+    {
+        "id": "evt_20260226_art",
+        "date": "2026-02-26",
+        "category": "艺术与科技",
+        "icon": "🎨",
+        "title": "AI 艺术发现平台上线",
+        "summary": "The Tenth Muse (10M) 艺术发现平台正式发布，汇集来自 17 个博物馆的超过 12 万件艺术品。为艺术爱好者和研究者提供了全新的数字化探索体验。",
+        "posts_count": 1,
+        "sentiment": "positive",
+        "sentiment_label": "积极发布",
+        "tags": ["艺术", "AI", "博物馆", "文化", "平台"],
+        "sources": ["@Scobleizer", "@PaulJun_"]
+    },
+    {
+        "id": "evt_20260226_research",
+        "date": "2026-02-26",
+        "category": "AI 研究",
+        "icon": "🔬",
+        "title": "多智能体系统研究进展",
+        "summary": "AI 研究前沿：The Vision Wormhole 论文探索异构多智能体系统中的潜在空间通信，为分布式 AI 系统协作提供新思路。",
+        "posts_count": 1,
+        "sentiment": "neutral",
+        "sentiment_label": "学术讨论",
+        "tags": ["AI研究", "多智能体", "分布式系统", "前沿"],
+        "sources": ["@Scobleizer", "@TheTuringPost"]
+    },
+    // ========== Historical Events (2026-02-25) ==========
+    {
+        "id": "evt_20260225_001",
+        "date": "2026-02-25",
+        "category": "OpenClaw 生态",
+        "icon": "🦞",
         "title": "OpenClaw 生态",
-        "summary": "OpenClaw 生态持续繁荣，今日有多款新产品发布：MaxClaw（MiniMax Agent 集成）、MacClaw（macOS 客户端）、Toggle（实时网页监控）以及 Pair Programmer（编程助手）。社区还展示了 Tamagotchi 风格的 OpenClaw 演示，展现了平台的多样性和创造力。",
+        "summary": "OpenClaw 生态持续繁荣，多款新产品发布：MaxClaw（MiniMax Agent 集成）、MacClaw（macOS 客户端）、Toggle（实时网页监控）以及 Pair Programmer（编程助手）。社区还展示了 Tamagotchi 风格的 OpenClaw 演示。",
         "posts_count": 6,
         "sentiment": "positive",
         "sentiment_label": "积极热议",
-        "tags": [
-            "OpenClaw",
-            "AI Agent",
-            "MiniMax",
-            "开发者工具"
-        ],
-        "sources": [
-            "@Scobleizer",
-            "@MiniMaxAgent"
-        ]
+        "tags": ["OpenClaw", "AI Agent", "MiniMax", "开发者工具"],
+        "sources": ["@Scobleizer", "@MiniMaxAgent"]
     },
     {
-        "id": "evt_20260226_002",
-        "date": "2026-02-26",
+        "id": "evt_20260225_002",
+        "date": "2026-02-25",
         "category": "AI Agent 平台",
         "icon": "🤖",
         "title": "AI Agent 平台",
-        "summary": "AI Agent 领域新品频出：Perplexity Computer 统一 AI 能力、Genspark AI Inbox 自动化邮件处理、Rowspace_AI 投资智能平台、Basis AI 会计师代理。Cursor AI 也展示了 Agent 发送 Demo 的新功能，标志着 AI 编程助手的进一步进化。",
+        "summary": "AI Agent 领域新品频出：Perplexity Computer 统一 AI 能力、Genspark AI Inbox 自动化邮件处理、Rowspace_AI 投资智能平台、Basis AI 会计师代理。Cursor AI 也展示了 Agent 发送 Demo 的新功能。",
         "posts_count": 8,
         "sentiment": "positive",
         "sentiment_label": "积极热议",
-        "tags": [
-            "AI Agent",
-            "Perplexity",
-            "Cursor",
-            "自动化"
-        ],
-        "sources": [
-            "@Scobleizer"
-        ]
+        "tags": ["AI Agent", "Perplexity", "Cursor", "自动化"],
+        "sources": ["@Scobleizer"]
     },
     {
-        "id": "evt_20260226_003",
-        "date": "2026-02-26",
+        "id": "evt_20260225_003",
+        "date": "2026-02-25",
         "category": "VR/AR",
         "icon": "🥽",
         "title": "VR/AR",
@@ -172,19 +281,12 @@
         "posts_count": 3,
         "sentiment": "positive",
         "sentiment_label": "积极热议",
-        "tags": [
-            "Vision Pro",
-            "VR",
-            "空间计算",
-            "苹果"
-        ],
-        "sources": [
-            "@Scobleizer"
-        ]
+        "tags": ["Vision Pro", "VR", "空间计算", "苹果"],
+        "sources": ["@Scobleizer"]
     },
     {
-        "id": "evt_20260226_004",
-        "date": "2026-02-26",
+        "id": "evt_20260225_004",
+        "date": "2026-02-25",
         "category": "AI 研究",
         "icon": "🔬",
         "title": "AI 研究",
@@ -192,19 +294,12 @@
         "posts_count": 2,
         "sentiment": "neutral",
         "sentiment_label": "中性讨论",
-        "tags": [
-            "AI研究",
-            "Gemini",
-            "Transformer",
-            "前沿"
-        ],
-        "sources": [
-            "@Scobleizer"
-        ]
+        "tags": ["AI研究", "Gemini", "Transformer", "前沿"],
+        "sources": ["@Scobleizer"]
     },
     {
-        "id": "evt_20260226_005",
-        "date": "2026-02-26",
+        "id": "evt_20260225_005",
+        "date": "2026-02-25",
         "category": "AI 创作",
         "icon": "🎨",
         "title": "AI 创作",
@@ -212,19 +307,12 @@
         "posts_count": 4,
         "sentiment": "positive",
         "sentiment_label": "积极热议",
-        "tags": [
-            "AI创作",
-            "生成式AI",
-            "FLUX",
-            "视频生成"
-        ],
-        "sources": [
-            "@Scobleizer"
-        ]
+        "tags": ["AI创作", "生成式AI", "FLUX", "视频生成"],
+        "sources": ["@Scobleizer"]
     },
     {
-        "id": "evt_20260226_006",
-        "date": "2026-02-26",
+        "id": "evt_20260225_006",
+        "date": "2026-02-25",
         "category": "其他",
         "icon": "📌",
         "title": "其他",
@@ -232,22 +320,26 @@
         "posts_count": 2,
         "sentiment": "neutral",
         "sentiment_label": "中性讨论",
-        "tags": [
-            "AI",
-            "科技",
-            "其他"
-        ],
-        "sources": [
-            "@Scobleizer"
-        ]
+        "tags": ["AI", "科技", "其他"],
+        "sources": ["@Scobleizer"]
     }
 ];
 
         // Render events
         function renderEvents() {
             const container = document.getElementById('events-container');
+            let currentDate = '';
             
             X_EVENTS_ARCHIVE.forEach(event => {
+                // Add date divider if date changes
+                if (event.date !== currentDate) {
+                    currentDate = event.date;
+                    const divider = document.createElement('div');
+                    divider.className = 'date-divider';
+                    divider.textContent = `📅 ${currentDate}`;
+                    container.appendChild(divider);
+                }
+                
                 const card = document.createElement('div');
                 card.className = 'event-card';
                 
