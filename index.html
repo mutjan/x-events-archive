@@ -113,15 +113,15 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">8</div>
+                <div class="stat-number" id="total-events">10</div>
                 <div class="stat-label">今日事件数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">25</div>
+                <div class="stat-number" id="total-posts">21</div>
                 <div class="stat-label">分析帖子总数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">75%</div>
+                <div class="stat-number" id="positive-rate">70%</div>
                 <div class="stat-label">积极讨论占比</div>
             </div>
         </div>
@@ -131,7 +131,7 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 04:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 05:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
@@ -139,190 +139,343 @@
     <script>
         // X Events Archive Data - Historical + Today's Events
         const X_EVENTS_ARCHIVE = [
-    // ========== 2026-02-26 (Today) ==========
-    {
-        "id": "evt_20260226_openclaw",
-        "date": "2026-02-26",
-        "category": "OpenClaw 生态",
-        "icon": "🦞",
-        "title": "OpenClaw 生态大爆发",
-        "summary": "OpenClaw 生态今日迎来多款重磅产品发布：MaxClaw（MiniMax Agent × M2.5 集成，支持 Telegram/WhatsApp/Slack/Discord 7×24 运行）、MacClaw（Raycast 风格 macOS 客户端，覆盖 IDE/浏览器/幻灯片）、Toggle（让 Agent 实时看到用户的网页活动）、以及 Tamagotchi 风格的 OpenClaw 演示。社区热情高涨，生态快速扩张。",
-        "posts_count": 6,
-        "sentiment": "positive",
-        "sentiment_label": "极度兴奋",
-        "tags": ["OpenClaw", "AI Agent", "MiniMax", "开发者工具", "生态"],
-        "sources": ["@Scobleizer", "@MiniMaxAgent", "@tokifyi", "@0xPeLpA", "@itsnex1s"]
-    },
-    {
-        "id": "evt_20260226_coding",
-        "date": "2026-02-26",
-        "category": "AI 编程工具",
-        "icon": "💻",
-        "title": "AI 编程工具变革加速",
-        "summary": "AI 编程领域迎来重大变革：Karpathy 发文称过去 2 个月编程因 AI 发生巨变；Ahmad Awais 宣布融资 500 万美元开发能学习用户编码风格的 Agent；Cursor AI 展示 Agent 发送 Demo 的新功能；Pair Programmer 推出能看屏幕、听思考的 Claude Code 增强版；Google Flow 重新设计并推出。行业正经历从辅助到自主的跃迁。",
-        "posts_count": 5,
-        "sentiment": "positive",
-        "sentiment_label": "积极热议",
-        "tags": ["AI编程", "Cursor", "Claude", "开发者工具", "融资"],
-        "sources": ["@Scobleizer", "@karpathy", "@MrAhmadAwais", "@ashu_trv", "@joshwoodward"]
-    },
-    {
-        "id": "evt_20260226_robotics",
-        "date": "2026-02-26",
-        "category": "AI 机器人",
-        "icon": "🤖",
-        "title": "AI 机器人与智能体实用化",
-        "summary": "AI 机器人领域取得多项突破：GEAR 团队训练人形机器人取得里程碑进展，人类数据在人形机器人上变得更有用；Google 展示 Gemini 3 Flash 与 VLA 模型结合教机器人下棋；Basis 正在构建 AI 会计师，实现长期任务代理。Perplexity Computer 统一所有 AI 能力于一个系统，可研究、设计、执行。",
-        "posts_count": 4,
-        "sentiment": "positive",
-        "sentiment_label": "积极进展",
-        "tags": ["机器人", "Gemini", "Perplexity", "AI Agent", "VLA"],
-        "sources": ["@Scobleizer", "@danfei_xu", "@googleaidevs", "@vkhosla", "@perplexity_ai"]
-    },
-    {
-        "id": "evt_20260226_gaming",
-        "date": "2026-02-26",
-        "category": "AI 游戏",
-        "icon": "🎮",
-        "title": "AI 世界模型与游戏",
-        "summary": "AI 游戏领域出现新突破：开发者声称已用 LLM 解决游戏世界建模问题，使用 Three.js 技术；Scoble 评论称这是与其他世界模型截然不同的方向，更专注于游戏。这标志着 LLM 在游戏生成和交互方面的新应用方向。",
-        "posts_count": 2,
-        "sentiment": "positive",
-        "sentiment_label": "创新突破",
-        "tags": ["AI游戏", "世界模型", "LLM", "Three.js", "生成式AI"],
-        "sources": ["@Scobleizer", "@alightinastorm"]
-    },
-    {
-        "id": "evt_20260226_vr",
-        "date": "2026-02-26",
-        "category": "VR/AR",
-        "icon": "🥽",
-        "title": "Apple Vision Pro 怀旧街机体验",
-        "summary": "Apple Vision Pro 迎来 Retrocade 应用，提供怀旧的虚拟 1980 年代街机体验，被评价为 VR 游戏玩家期待已久的体验。展现了空间计算在娱乐领域的潜力。",
-        "posts_count": 1,
-        "sentiment": "positive",
-        "sentiment_label": "积极评价",
-        "tags": ["Vision Pro", "VR", "游戏", "苹果", "空间计算"],
-        "sources": ["@Scobleizer", "@UploadVR"]
-    },
-    {
-        "id": "evt_20260226_productivity",
-        "date": "2026-02-26",
-        "category": "生产力工具",
-        "icon": "📝",
-        "title": "AI 生产力工具创新",
-        "summary": "生产力工具领域持续创新：Genspark AI Inbox 推出自定义工作流，让 AI 自动分类邮件；开发者批评当前笔记应用过度捕捉无意义内容，呼吁更智能的记录方式。",
-        "posts_count": 2,
-        "sentiment": "neutral",
-        "sentiment_label": "中性讨论",
-        "tags": ["生产力", "AI工具", "邮件", "笔记"],
-        "sources": ["@Scobleizer", "@genspark_ai", "@huang_song_"]
-    },
-    {
-        "id": "evt_20260226_art",
-        "date": "2026-02-26",
-        "category": "艺术与科技",
-        "icon": "🎨",
-        "title": "AI 艺术发现平台上线",
-        "summary": "The Tenth Muse (10M) 艺术发现平台正式发布，汇集来自 17 个博物馆的超过 12 万件艺术品。为艺术爱好者和研究者提供了全新的数字化探索体验。",
-        "posts_count": 1,
-        "sentiment": "positive",
-        "sentiment_label": "积极发布",
-        "tags": ["艺术", "AI", "博物馆", "文化", "平台"],
-        "sources": ["@Scobleizer", "@PaulJun_"]
-    },
-    {
-        "id": "evt_20260226_research",
-        "date": "2026-02-26",
-        "category": "AI 研究",
-        "icon": "🔬",
-        "title": "多智能体系统研究进展",
-        "summary": "AI 研究前沿：The Vision Wormhole 论文探索异构多智能体系统中的潜在空间通信，为分布式 AI 系统协作提供新思路。",
-        "posts_count": 1,
-        "sentiment": "neutral",
-        "sentiment_label": "学术讨论",
-        "tags": ["AI研究", "多智能体", "分布式系统", "前沿"],
-        "sources": ["@Scobleizer", "@TheTuringPost"]
-    },
-    // ========== Historical Events (2026-02-25) ==========
-    {
-        "id": "evt_20260225_001",
-        "date": "2026-02-25",
-        "category": "OpenClaw 生态",
-        "icon": "🦞",
-        "title": "OpenClaw 生态",
-        "summary": "OpenClaw 生态持续繁荣，多款新产品发布：MaxClaw（MiniMax Agent 集成）、MacClaw（macOS 客户端）、Toggle（实时网页监控）以及 Pair Programmer（编程助手）。社区还展示了 Tamagotchi 风格的 OpenClaw 演示。",
-        "posts_count": 6,
-        "sentiment": "positive",
-        "sentiment_label": "积极热议",
-        "tags": ["OpenClaw", "AI Agent", "MiniMax", "开发者工具"],
-        "sources": ["@Scobleizer", "@MiniMaxAgent"]
-    },
-    {
-        "id": "evt_20260225_002",
-        "date": "2026-02-25",
-        "category": "AI Agent 平台",
-        "icon": "🤖",
-        "title": "AI Agent 平台",
-        "summary": "AI Agent 领域新品频出：Perplexity Computer 统一 AI 能力、Genspark AI Inbox 自动化邮件处理、Rowspace_AI 投资智能平台、Basis AI 会计师代理。Cursor AI 也展示了 Agent 发送 Demo 的新功能。",
-        "posts_count": 8,
-        "sentiment": "positive",
-        "sentiment_label": "积极热议",
-        "tags": ["AI Agent", "Perplexity", "Cursor", "自动化"],
-        "sources": ["@Scobleizer"]
-    },
-    {
-        "id": "evt_20260225_003",
-        "date": "2026-02-25",
-        "category": "VR/AR",
-        "icon": "🥽",
-        "title": "VR/AR",
-        "summary": "Apple Vision Pro 生态持续扩展：Retrocade 带来怀旧街机体验，Blockworks 提供空间构建工具。VR/AR 领域正在从娱乐向生产力工具演进。",
-        "posts_count": 3,
-        "sentiment": "positive",
-        "sentiment_label": "积极热议",
-        "tags": ["Vision Pro", "VR", "空间计算", "苹果"],
-        "sources": ["@Scobleizer"]
-    },
-    {
-        "id": "evt_20260225_004",
-        "date": "2026-02-25",
-        "category": "AI 研究",
-        "icon": "🔬",
-        "title": "AI 研究",
-        "summary": "AI 研究前沿进展：Google Gemini 3 Flash 与 VLA 模型结合教机器人下棋，Vision Wormhole 探索多智能体潜在空间通信，SONIC（4200万参数 Transformer）控制人形机器人身体。",
-        "posts_count": 2,
-        "sentiment": "neutral",
-        "sentiment_label": "中性讨论",
-        "tags": ["AI研究", "Gemini", "Transformer", "前沿"],
-        "sources": ["@Scobleizer"]
-    },
-    {
-        "id": "evt_20260225_005",
-        "date": "2026-02-25",
-        "category": "AI 创作",
-        "icon": "🎨",
-        "title": "AI 创作",
-        "summary": "AI 创作工具持续升级：Gen-4.5 视频模型受到创作者青睐，FLUX.2 LoRA 实现精准虚拟试穿，Three.js 游戏世界建模取得突破，The Tenth Muse 艺术发现平台汇集 12 万件博物馆藏品。",
-        "posts_count": 4,
-        "sentiment": "positive",
-        "sentiment_label": "积极热议",
-        "tags": ["AI创作", "生成式AI", "FLUX", "视频生成"],
-        "sources": ["@Scobleizer"]
-    },
-    {
-        "id": "evt_20260225_006",
-        "date": "2026-02-25",
-        "category": "其他",
-        "icon": "📌",
-        "title": "其他",
-        "summary": "其他值得关注的技术动态和行业讨论。",
-        "posts_count": 2,
-        "sentiment": "neutral",
-        "sentiment_label": "中性讨论",
-        "tags": ["AI", "科技", "其他"],
-        "sources": ["@Scobleizer"]
-    }
+        {
+                "id": "evt_20260226_001",
+                "date": "2026-02-26",
+                "category": "OpenClaw 生态",
+                "icon": "🦞",
+                "title": "OpenClaw 生态持续扩展",
+                "summary": "OpenClaw 生态持续繁荣，Toggle 插件让 Agent 首次实现实时网页浏览能力，MaxClaw 集成 MiniMax Agent 提供 7×24 跨平台服务，Tamagotchi 风格演示展示了趣味交互可能性。",
+                "posts_count": 3,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "OpenClaw",
+                        "AI Agent",
+                        "MiniMax",
+                        "开发者工具"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@MiniMaxAgent",
+                        "@0xPeLpA",
+                        "@tokifyi"
+                ]
+        },
+        {
+                "id": "evt_20260226_002",
+                "date": "2026-02-26",
+                "category": "AI 编程工具",
+                "icon": "💻",
+                "title": "AI 编程工具变革加速",
+                "summary": "Karpathy 发文称过去 2 个月编程因 AI 发生巨变；Ahmad Awais 宣布融资 500 万美元开发能学习用户编码风格的 Agent；Cursor AI 展示 Agent 发送 Demo 的新功能；Pair Programmer 推出能看屏幕、听思考的增强版。",
+                "posts_count": 4,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "AI编程",
+                        "Cursor",
+                        "Claude",
+                        "开发者工具",
+                        "融资"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@karpathy",
+                        "@MrAhmadAwais",
+                        "@ashu_trv"
+                ]
+        },
+        {
+                "id": "evt_20260226_003",
+                "date": "2026-02-26",
+                "category": "AI 机器人",
+                "icon": "🤖",
+                "title": "AI 机器人与智能体实用化",
+                "summary": "GEAR 团队训练人形机器人取得里程碑进展；Google 展示 Gemini 3 Flash 与 VLA 模型结合教机器人下棋；Basis 正在构建 AI 会计师，实现长期任务代理。机器人技术正从实验室走向实用。",
+                "posts_count": 3,
+                "sentiment": "positive",
+                "sentiment_label": "积极进展",
+                "tags": [
+                        "机器人",
+                        "Gemini",
+                        "AI Agent",
+                        "VLA"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@danfei_xu",
+                        "@googleaidevs",
+                        "@vkhosla"
+                ]
+        },
+        {
+                "id": "evt_20260226_004",
+                "date": "2026-02-26",
+                "category": "Perplexity AI",
+                "icon": "🔍",
+                "title": "Perplexity Computer 发布",
+                "summary": "Perplexity 发布全新 Computer 功能，统一所有 AI 能力于一个系统，可研究、设计、执行复杂任务，标志着 AI 助手向全能型 Agent 演进。",
+                "posts_count": 1,
+                "sentiment": "positive",
+                "sentiment_label": "积极发布",
+                "tags": [
+                        "Perplexity",
+                        "AI Agent",
+                        "搜索",
+                        "生产力"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@perplexity_ai"
+                ]
+        },
+        {
+                "id": "evt_20260226_005",
+                "date": "2026-02-26",
+                "category": "AI 游戏",
+                "icon": "🎮",
+                "title": "AI 世界模型与游戏突破",
+                "summary": "开发者声称已用 LLM 解决游戏世界建模问题，使用 Three.js 技术；Scoble 评论称这是与其他世界模型截然不同的方向，更专注于游戏场景。",
+                "posts_count": 2,
+                "sentiment": "positive",
+                "sentiment_label": "创新突破",
+                "tags": [
+                        "AI游戏",
+                        "世界模型",
+                        "LLM",
+                        "Three.js"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@alightinastorm"
+                ]
+        },
+        {
+                "id": "evt_20260226_006",
+                "date": "2026-02-26",
+                "category": "VR/AR",
+                "icon": "🥽",
+                "title": "Apple Vision Pro 怀旧街机体验",
+                "summary": "Apple Vision Pro 迎来 Retrocade 应用，提供怀旧的虚拟 1980 年代街机体验，被评价为 VR 游戏玩家期待已久的体验。",
+                "posts_count": 1,
+                "sentiment": "positive",
+                "sentiment_label": "积极评价",
+                "tags": [
+                        "Vision Pro",
+                        "VR",
+                        "游戏",
+                        "苹果"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@UploadVR"
+                ]
+        },
+        {
+                "id": "evt_20260226_007",
+                "date": "2026-02-26",
+                "category": "AI 生产力工具",
+                "icon": "📝",
+                "title": "AI 生产力工具创新",
+                "summary": "Genspark AI Inbox 推出自定义工作流，让 AI 自动分类邮件；Google Flow 重新设计，旨在让用户停止与工具斗争，专注于创作。",
+                "posts_count": 2,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "生产力",
+                        "AI工具",
+                        "Genspark",
+                        "Google"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@genspark_ai",
+                        "@joshwoodward"
+                ]
+        },
+        {
+                "id": "evt_20260226_008",
+                "date": "2026-02-26",
+                "category": "AI 金融",
+                "icon": "💰",
+                "title": "Rowspace AI 与 AI 会计师",
+                "summary": "Rowspace AI 正式发布，为投资者提供专业智能决策支持；Basis 正在构建 AI 会计师，实现长期任务代理在金融领域的应用。",
+                "posts_count": 2,
+                "sentiment": "positive",
+                "sentiment_label": "积极发布",
+                "tags": [
+                        "AI金融",
+                        "投资",
+                        "Rowspace",
+                        "Basis"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@mlmanapat",
+                        "@vkhosla"
+                ]
+        },
+        {
+                "id": "evt_20260226_009",
+                "date": "2026-02-26",
+                "category": "科技动态",
+                "icon": "📰",
+                "title": "科技行业动态",
+                "summary": "Larry Page 已正式移居佛罗里达，引发对财富税政策的讨论；Vercept 收购引发关注，实现对 Macintosh 的远程控制能力。",
+                "posts_count": 2,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "科技新闻",
+                        "Google",
+                        "收购"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@paulg"
+                ]
+        },
+        {
+                "id": "evt_20260226_010",
+                "date": "2026-02-26",
+                "category": "小模型",
+                "icon": "🤏",
+                "title": "小模型优势凸显",
+                "summary": "社区热议小模型在特定场景下的优越性，'Small model supremacy' 成为讨论热点。",
+                "posts_count": 1,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "小模型",
+                        "AI",
+                        "效率"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@lucidpaths33"
+                ]
+        },
+        {
+                "id": "evt_20260225_001",
+                "date": "2026-02-25",
+                "category": "OpenClaw 生态",
+                "icon": "🦞",
+                "title": "OpenClaw 生态",
+                "summary": "OpenClaw 生态持续繁荣，多款新产品发布：MaxClaw（MiniMax Agent 集成）、MacClaw（macOS 客户端）、Toggle（实时网页监控）以及 Pair Programmer（编程助手）。社区还展示了 Tamagotchi 风格的 OpenClaw 演示。",
+                "posts_count": 6,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "OpenClaw",
+                        "AI Agent",
+                        "MiniMax",
+                        "开发者工具"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@MiniMaxAgent"
+                ]
+        },
+        {
+                "id": "evt_20260225_002",
+                "date": "2026-02-25",
+                "category": "AI Agent 平台",
+                "icon": "🤖",
+                "title": "AI Agent 平台",
+                "summary": "AI Agent 领域新品频出：Perplexity Computer 统一 AI 能力、Genspark AI Inbox 自动化邮件处理、Rowspace_AI 投资智能平台、Basis AI 会计师代理。Cursor AI 也展示了 Agent 发送 Demo 的新功能。",
+                "posts_count": 8,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "AI Agent",
+                        "Perplexity",
+                        "Cursor",
+                        "自动化"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        },
+        {
+                "id": "evt_20260225_003",
+                "date": "2026-02-25",
+                "category": "VR/AR",
+                "icon": "🥽",
+                "title": "VR/AR",
+                "summary": "Apple Vision Pro 生态持续扩展：Retrocade 带来怀旧街机体验，Blockworks 提供空间构建工具。VR/AR 领域正在从娱乐向生产力工具演进。",
+                "posts_count": 3,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "Vision Pro",
+                        "VR",
+                        "空间计算",
+                        "苹果"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        },
+        {
+                "id": "evt_20260225_004",
+                "date": "2026-02-25",
+                "category": "AI 研究",
+                "icon": "🔬",
+                "title": "AI 研究",
+                "summary": "AI 研究前沿进展：Google Gemini 3 Flash 与 VLA 模型结合教机器人下棋，Vision Wormhole 探索多智能体潜在空间通信，SONIC（4200万参数 Transformer）控制人形机器人身体。",
+                "posts_count": 2,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "AI研究",
+                        "Gemini",
+                        "Transformer",
+                        "前沿"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        },
+        {
+                "id": "evt_20260225_005",
+                "date": "2026-02-25",
+                "category": "AI 创作",
+                "icon": "🎨",
+                "title": "AI 创作",
+                "summary": "AI 创作工具持续升级：Gen-4.5 视频模型受到创作者青睐，FLUX.2 LoRA 实现精准虚拟试穿，Three.js 游戏世界建模取得突破，The Tenth Muse 艺术发现平台汇集 12 万件博物馆藏品。",
+                "posts_count": 4,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "AI创作",
+                        "生成式AI",
+                        "FLUX",
+                        "视频生成"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        },
+        {
+                "id": "evt_20260225_006",
+                "date": "2026-02-25",
+                "category": "其他",
+                "icon": "📌",
+                "title": "其他",
+                "summary": "其他值得关注的技术动态和行业讨论。",
+                "posts_count": 2,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "AI",
+                        "科技",
+                        "其他"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        }
 ];
 
         // Render events
