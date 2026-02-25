@@ -95,7 +95,7 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">9</div>
+                <div class="stat-number" id="total-events">6</div>
                 <div class="stat-label">今日事件数</div>
             </div>
             <div class="stat-card">
@@ -113,7 +113,7 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 01:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 02:02 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 自动更新每小时</p>
         </div>
     </div>
@@ -121,124 +121,134 @@
     <script>
         // X Events Archive Data
         const X_EVENTS_ARCHIVE = [
-            {
-                id: "evt_20260226_001",
-                date: "2026-02-26",
-                category: "AI Agent Platform",
-                icon: "🦞",
-                title: "OpenClaw 生态系统爆发",
-                summary: "OpenClaw平台迎来多个重要发布：MaxClaw集成MiniMax Agent M2.5提供7×24跨平台支持；MacClaw推出Raycast风格macOS客户端；Toggle实现实时屏幕监控让Agent可见用户网页操作；Pair Programmer解决Claude Code无法感知屏幕和听觉的问题。",
-                posts_count: 5,
-                sentiment: "positive",
-                sentiment_label: "兴奋期待",
-                tags: ["OpenClaw", "AI Agent", "MiniMax", "生产力工具"],
-                sources: ["@MiniMaxAgent", "@itsnex1s", "@0xPeLpA", "@ashu_trv", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_002",
-                date: "2026-02-26",
-                category: "AI Workflow",
-                icon: "⚡",
-                title: "AI Agent 工作流实用化",
-                summary: "AI Agent从概念走向实际工作流：Genspark AI Inbox支持自定义AI工作流自动分类邮件；Cursor AI新增Agent发送演示Demo功能；Basis公司开发长期AI代理用于会计工作，展示AI在垂直领域的深度应用。",
-                posts_count: 4,
-                sentiment: "positive",
-                sentiment_label: "实用主义",
-                tags: ["AI Workflow", "Cursor", "Genspark", "自动化"],
-                sources: ["@genspark_ai", "@JuanRezzio", "@vkhosla", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_003",
-                date: "2026-02-26",
-                category: "Embodied AI",
-                icon: "🤖",
-                title: "具身智能重大进展",
-                summary: "AI与机器人结合进入实际应用：SONIC项目使用4200万参数Transformer控制人形机器人；Mimic Robotics与Audi合作将AI驱动机器人引入工业生产。标志着AI从数字世界向物理世界的重要跨越。",
-                posts_count: 3,
-                sentiment: "positive",
-                sentiment_label: "技术突破",
-                tags: ["机器人", "具身智能", "工业AI", "Transformer"],
-                sources: ["@DrJimFan", "@mimicrobotics", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_004",
-                date: "2026-02-26",
-                category: "AI Creative",
-                icon: "🎨",
-                title: "AI 内容生成与创意工具",
-                summary: "AI创意工具持续演进：开发者使用LLM和Three.js进行游戏世界建模；Runway Gen-4.5在社区艺术挑战中保持视频模型首选地位；FLUX.2发布9B参数虚拟试衣LoRA模型；The Tenth Muse艺术发现平台汇集17家博物馆12万件艺术品。",
-                posts_count: 4,
-                sentiment: "positive",
-                sentiment_label: "创意激发",
-                tags: ["生成式AI", "视频生成", "FLUX", "艺术AI"],
-                sources: ["@alightinastorm", "@IXITimmyIXI", "@fal", "@PaulJun_", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_005",
-                date: "2026-02-26",
-                category: "VR/AR",
-                icon: "🥽",
-                title: "空间计算与VR体验",
-                summary: "Apple Vision Pro生态持续丰富：Retrocade提供1980年代复古街机VR体验；Blockworks支持有界/无界空间构建并可在房间中锚定场景。怀旧与创新的结合为空间计算带来新应用场景。",
-                posts_count: 2,
-                sentiment: "positive",
-                sentiment_label: "怀旧创新",
-                tags: ["Vision Pro", "VR", "空间计算", "游戏"],
-                sources: ["@UploadVR", "@ElasticSea", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_006",
-                date: "2026-02-26",
-                category: "AI Investment",
-                icon: "💰",
-                title: "AI 投资与创业动态",
-                summary: "AI商业化进展受关注：Rowspace AI发布专为投资者设计的智能决策工具；Cognition团队持续分享AI研究进展。B2B AI应用成为投资热点。",
-                posts_count: 2,
-                sentiment: "positive",
-                sentiment_label: "商业乐观",
-                tags: ["AI投资", "B2B", "创业", "决策智能"],
-                sources: ["@mlmanapat", "@ScottWu46", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_007",
-                date: "2026-02-26",
-                category: "Autonomous Driving",
-                icon: "🚗",
-                title: "自动驾驶安全案例",
-                summary: "Tesla FSD获得正面用户反馈：用户分享FSD在高速公路上及时检测障碍物、减速并安全避让的案例，强调FSD在关键时刻的安全价值。",
-                posts_count: 2,
-                sentiment: "positive",
-                sentiment_label: "安全认可",
-                tags: ["Tesla", "FSD", "自动驾驶", "安全"],
-                sources: ["@gavin1818", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_008",
-                date: "2026-02-26",
-                category: "AI Research",
-                icon: "📚",
-                title: "AI 前沿研究追踪",
-                summary: "学术界持续产出重要研究：Vision Wormhole探索异构多智能体系统中的潜在空间通信；AI+游戏作为通用智能代理的研究强调抽象迁移能力的重要性。",
-                posts_count: 2,
-                sentiment: "neutral",
-                sentiment_label: "学术关注",
-                tags: ["多智能体", "AI研究", "通用智能", "游戏AI"],
-                sources: ["@TheTuringPost", "@GregKamradt", "@Scobleizer"]
-            },
-            {
-                id: "evt_20260226_009",
-                date: "2026-02-26",
-                category: "Productivity",
-                icon: "📝",
-                title: "AI 记录工具反思",
-                summary: "关于AI语音记录工具的讨论：强调质量优于数量，世界不需要另一个捕捉每个"嗯"和"啊"的应用，而是需要真正理解上下文的智能工具。",
-                posts_count: 1,
-                sentiment: "neutral",
-                sentiment_label: "理性反思",
-                tags: ["AI工具", "生产力", "语音记录"],
-                sources: ["@huang_song_", "@Scobleizer"]
-            }
-        ];
+    {
+        "id": "evt_20260225_001",
+        "date": "2026-02-25",
+        "category": "AI Agent Platform",
+        "icon": "🦞",
+        "title": "AI Agent/OpenClaw",
+        "summary": "OpenClaw 生态系统持续扩展，包括 MaxClaw（MiniMax 集成）、MacClaw（macOS 客户端）、Toggle（网页监控）和 Pair Programmer（屏幕感知编程助手）等新工具发布。社区对 AI Agent 的实时感知能力表现出浓厚兴趣。",
+        "posts_count": 10,
+        "sentiment": "positive",
+        "sentiment_label": "兴奋期待",
+        "tags": [
+            "OpenClaw",
+            "AI Agent",
+            "MiniMax",
+            "生产力工具"
+        ],
+        "sources": [
+            "@Scobleizer",
+            "@Scobleizer",
+            "@Scobleizer"
+        ]
+    },
+    {
+        "id": "evt_20260225_002",
+        "date": "2026-02-25",
+        "category": "VR/AR",
+        "icon": "🥽",
+        "title": "VR/AR",
+        "summary": "Apple Vision Pro 生态持续丰富，Retrocade 带来怀旧街机体验，Blockworks 提供空间构建工具。VR 内容生态正在逐步成熟。",
+        "posts_count": 7,
+        "sentiment": "positive",
+        "sentiment_label": "怀旧创新",
+        "tags": [
+            "Vision Pro",
+            "VR",
+            "空间计算",
+            "游戏"
+        ],
+        "sources": [
+            "@Scobleizer",
+            "@Scobleizer",
+            "@Scobleizer"
+        ]
+    },
+    {
+        "id": "evt_20260225_003",
+        "date": "2026-02-25",
+        "category": "AI Product Launch",
+        "icon": "⚡",
+        "title": "AI Tools/Product Launch",
+        "summary": "Perplexity 推出 Computer 功能，整合多种 AI 能力；Genspark 发布 AI Inbox 工作流；Rowspace_AI 为投资者提供智能决策支持。AI 工具正在向更专业的垂直领域发展。",
+        "posts_count": 3,
+        "sentiment": "positive",
+        "sentiment_label": "产品发布",
+        "tags": [
+            "AI工具",
+            "Perplexity",
+            "Genspark",
+            "产品发布"
+        ],
+        "sources": [
+            "@Scobleizer",
+            "@Scobleizer",
+            "@Scobleizer"
+        ]
+    },
+    {
+        "id": "evt_20260225_004",
+        "date": "2026-02-25",
+        "category": "AI Creative",
+        "icon": "🎨",
+        "title": "AI Art/Generation",
+        "summary": "Gen-4.5 视频模型受到创作者青睐；FLUX.2 LoRA 实现精准虚拟试衣；LLM 游戏世界建模技术取得突破。AI 内容生成工具正在改变创意产业。",
+        "posts_count": 2,
+        "sentiment": "positive",
+        "sentiment_label": "创意激发",
+        "tags": [
+            "生成式AI",
+            "视频生成",
+            "FLUX",
+            "创意AI"
+        ],
+        "sources": [
+            "@Scobleizer",
+            "@Scobleizer"
+        ]
+    },
+    {
+        "id": "evt_20260225_005",
+        "date": "2026-02-25",
+        "category": "AI Research",
+        "icon": "📚",
+        "title": "AI Research",
+        "summary": "多智能体系统研究取得进展，包括 Vision Wormhole 潜在空间通信研究；SONIC 模型展示小型 Transformer 在人形机器人控制上的潜力。AI 研究正朝着更高效、更协作的方向发展。",
+        "posts_count": 2,
+        "sentiment": "neutral",
+        "sentiment_label": "学术关注",
+        "tags": [
+            "AI研究",
+            "多智能体",
+            "机器人",
+            "学术"
+        ],
+        "sources": [
+            "@Scobleizer",
+            "@Scobleizer"
+        ]
+    },
+    {
+        "id": "evt_20260225_006",
+        "date": "2026-02-25",
+        "category": "Other",
+        "icon": "📝",
+        "title": "Misc",
+        "summary": "其他 AI 相关讨论和分享。",
+        "posts_count": 1,
+        "sentiment": "neutral",
+        "sentiment_label": "其他讨论",
+        "tags": [
+            "AI",
+            "科技",
+            "讨论"
+        ],
+        "sources": [
+            "@Scobleizer"
+        ]
+    }
+];
 
         // Render events
         function renderEvents() {
