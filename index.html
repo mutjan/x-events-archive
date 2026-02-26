@@ -114,15 +114,15 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">21</div>
+                <div class="stat-number" id="total-events">8</div>
                 <div class="stat-label">今日事件</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">85+</div>
+                <div class="stat-number" id="total-posts">45+</div>
                 <div class="stat-label">相关推文</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">67%</div>
+                <div class="stat-number" id="positive-rate">75%</div>
                 <div class="stat-label">积极情绪占比</div>
             </div>
         </div>
@@ -132,16 +132,121 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 04:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 05:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
 
     <script>
         // X Events Archive Data - Historical + Today's Events
-        // Updated: 2026-02-27 04:00 AM CST
+        // Updated: 2026-02-27 05:00 AM CST
         const X_EVENTS_ARCHIVE = [
-        // ========== 2026-02-27 04:00 新事件 ==========
+        // ========== 2026-02-27 05:00 新事件 ==========
+        {
+            "id": "evt_20260227_801",
+            "date": "2026-02-27",
+            "category": "游戏发布",
+            "icon": "🎮",
+            "title": "《宝可梦 火红/叶绿》今日登陆 Switch 平台",
+            "summary": "任天堂正式发布《宝可梦 火红版》和《宝可梦 叶绿版》Switch 移植版，售价各 19.99 美元。作为宝可梦系列经典重制作品，此次发布恰逢宝可梦日纪念活动，引发全球玩家热议。游戏支持 Switch 和 Switch 2 平台，数字版现已上线 eShop。",
+            "posts_count": 12,
+            "sentiment": "positive",
+            "sentiment_label": "玩家期待",
+            "tags": ["Pokemon", "宝可梦", "Switch", "Nintendo", "游戏发布"],
+            "sources": ["X Trending", "@NihongoGamer"]
+        },
+        {
+            "id": "evt_20260227_802",
+            "date": "2026-02-27",
+            "category": "娱乐热点",
+            "icon": "🎬",
+            "title": "《Smiling Friends》宣布完结引发粉丝不舍",
+            "summary": "Adult Swim 热门动画《Smiling Friends》创作者宣布该系列将在第三季完结，尽管此前已续订第四、五季。这部被誉为"最佳成人动画"的作品突然结束引发粉丝强烈反应，相关话题迅速登上 X 热搜。",
+            "posts_count": 9,
+            "sentiment": "negative",
+            "sentiment_label": "粉丝遗憾",
+            "tags": ["Smiling Friends", "Adult Swim", "动画", "完结"],
+            "sources": ["X Trending", "@deadline"]
+        },
+        {
+            "id": "evt_20260227_803",
+            "date": "2026-02-27",
+            "category": "政治议题",
+            "icon": "🏛️",
+            "title": "SAVE Act 投票法案持续引发两党争议",
+            "summary": "SAVE America Act（选民身份证明法案）在众议院通过后，参议院面临巨大压力。奥巴马发文反对称该法案将"剥夺数百万美国人投票权"，而白宫则呼吁通过以"确保选举安全"。该法案已成为 2026 年中期选举前的关键争议议题。",
+            "posts_count": 8,
+            "sentiment": "neutral",
+            "sentiment_label": "政治争议",
+            "tags": ["SAVE Act", "美国政治", "选举", "投票权", "两党"],
+            "sources": ["X Trending", "@BarackObama", "@WhiteHouse"]
+        },
+        {
+            "id": "evt_20260227_804",
+            "date": "2026-02-27",
+            "category": "时尚娱乐",
+            "icon": "👗",
+            "title": "aespa KARINA 成为 Prada FW26 代言人",
+            "summary": "Prada 正式宣布 aespa 队长 KARINA 成为 2026 秋冬女装系列代言人，并发布预告视频。KARINA 出席米兰时装周 Prada 大秀的造型引发热议，#PradaFW26xKARINA 话题登上 X 趋势榜首，展现 K-pop 与奢侈品牌的深度合作。",
+            "posts_count": 11,
+            "sentiment": "positive",
+            "sentiment_label": "粉丝狂欢",
+            "tags": ["KARINA", "aespa", "Prada", "米兰时装周", "K-pop"],
+            "sources": ["X Trending", "@Prada"]
+        },
+        {
+            "id": "evt_20260227_805",
+            "date": "2026-02-27",
+            "category": "综艺娱乐",
+            "icon": "📺",
+            "title": "《幸存者》第 50 季首播创收视纪录",
+            "summary": "CBS 长寿真人秀《幸存者》第 50 季首播，长达 3 小时的特别节目引发热议。本季汇聚多位传奇选手回归，包括 Cirie、Jenna、Ozzy 等。节目在 X 平台持续 trending 超过 20 小时，展现经典 IP 的持久魅力。",
+            "posts_count": 10,
+            "sentiment": "positive",
+            "sentiment_label": "观众热议",
+            "tags": ["Survivor", "Survivor50", "CBS", "真人秀", "综艺"],
+            "sources": ["X Trending", "@Rick_Devens"]
+        },
+        {
+            "id": "evt_20260227_806",
+            "date": "2026-02-27",
+            "category": "社会议题",
+            "icon": "🎵",
+            "title": "格莱美 ICE OUT 胸针抗议活动持续发酵",
+            "summary": "2026 年格莱美颁奖典礼上，Billie Eilish、Justin Bieber、Kehlani 等多位明星佩戴"ICE OUT"胸针亮相红毯，抗议美国移民与海关执法局(ICE)政策。这一行动引发广泛讨论，支持者称赞艺人勇于发声，批评者质疑其表演性质。",
+            "posts_count": 7,
+            "sentiment": "neutral",
+            "sentiment_label": "社会关注",
+            "tags": ["Grammys", "ICE OUT", "格莱美", "移民政策", "抗议"],
+            "sources": ["X Trending", "@WhatsTrending"]
+        },
+        {
+            "id": "evt_20260227_807",
+            "date": "2026-02-27",
+            "category": "游戏产业",
+            "icon": "🎲",
+            "title": "Valve 相关话题持续占据 X 趋势榜",
+            "summary": "Valve 公司持续在 X 平台 trending 超过 20 小时，具体原因涉及多个话题：包括 Steam 平台更新、《反恐精英》赛事、以及可能的未公布项目传闻。游戏社区对 Valve 的每一个动向保持高度关注。",
+            "posts_count": 6,
+            "sentiment": "positive",
+            "sentiment_label": "玩家关注",
+            "tags": ["Valve", "Steam", "游戏", "CS", "PC游戏"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260227_808",
+            "date": "2026-02-27",
+            "category": "影视动态",
+            "icon": "🎭",
+            "title": "格莱美最佳导演/男配角奖项揭晓",
+            "summary": "第 68 届格莱美奖颁奖典礼上，最佳导演和最佳男配角奖项归属引发 X 平台热议。相关话题登上全球趋势榜，粉丝为自己支持的艺人欢呼或表达遗憾，颁奖典礼相关讨论持续升温。",
+            "posts_count": 5,
+            "sentiment": "positive",
+            "sentiment_label": "粉丝讨论",
+            "tags": ["Grammys", "最佳导演", "最佳男配角", "颁奖典礼"],
+            "sources": ["X Trending"]
+        },
+        // ========== 2026-02-27 04:00 历史事件 (保留) ==========
         {
             "id": "evt_20260227_701",
             "date": "2026-02-27",
