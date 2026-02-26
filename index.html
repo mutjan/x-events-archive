@@ -114,15 +114,15 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">6</div>
+                <div class="stat-number" id="total-events">8</div>
                 <div class="stat-label">今日事件数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">15</div>
+                <div class="stat-number" id="total-posts">50+</div>
                 <div class="stat-label">分析帖子总数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">67%</div>
+                <div class="stat-number" id="positive-rate">45%</div>
                 <div class="stat-label">积极讨论占比</div>
             </div>
         </div>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 07:05 PM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 11:00 PM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
@@ -140,7 +140,112 @@
     <script>
         // X Events Archive Data - Historical + Today's Events
         const X_EVENTS_ARCHIVE = [
-        // ========== 2026-02-26 新事件 ==========
+        // ========== 2026-02-26 23:00 新事件 ==========
+        {
+            "id": "evt_20260226_401",
+            "date": "2026-02-26",
+            "category": "娱乐综艺",
+            "icon": "📺",
+            "title": "日本综艺《ぐるナイ》引发热议",
+            "summary": "日本热门综艺节目《ぐるナイ》（Gurunai）登上 X 全球趋势榜，粉丝讨论节目内容和嘉宾表现，展现日本娱乐文化的持续影响力。",
+            "posts_count": 8,
+            "sentiment": "positive",
+            "sentiment_label": "积极热议",
+            "tags": ["日本综艺", "ぐるナイ", "娱乐", " trending"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_402",
+            "date": "2026-02-26",
+            "category": "品牌营销",
+            "icon": "📱",
+            "title": "vivo V70 与明星联动营销",
+            "summary": "vivo V70 手机通过与明星 LingOrm 合作推广，相关话题登上全球趋势榜。同时 vivo 邀请 William 作为嘉宾参与品牌活动，展现手机品牌在亚太市场的积极营销策略。",
+            "posts_count": 6,
+            "sentiment": "positive",
+            "sentiment_label": "积极关注",
+            "tags": ["vivo", "LingOrm", "William", "手机营销", "亚太"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_403",
+            "date": "2026-02-26",
+            "category": "体育赛事",
+            "icon": "🏏",
+            "title": "南非 vs 西印度群岛板球赛激战",
+            "summary": "南非队（SA）与西印度群岛队（WI）的板球比赛引发广泛关注，Romario Shepherd 和 Jason Holder 等球员表现成为讨论焦点，展现板球运动在英联邦国家的持续热度。",
+            "posts_count": 5,
+            "sentiment": "neutral",
+            "sentiment_label": "中性关注",
+            "tags": ["板球", "南非", "西印度群岛", "SAvsWI", "体育"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_404",
+            "date": "2026-02-26",
+            "category": "时尚娱乐",
+            "icon": "👗",
+            "title": "KARINA 亮相 PRADA 2026 秋冬时装周",
+            "summary": "KARINA（aespa 成员）作为 PRADA 品牌嘉宾出席 2026 秋冬米兰时装周，粉丝热议其造型和时尚表现力。同时 BOSS SCOUPS 回归米兰时装周也引发关注。",
+            "posts_count": 7,
+            "sentiment": "positive",
+            "sentiment_label": "积极热议",
+            "tags": ["KARINA", "PRADA", "时装周", "MFW", "K-pop"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_405",
+            "date": "2026-02-26",
+            "category": "动漫文化",
+            "icon": "🎬",
+            "title": "《ちいかわ》剧场版与《あかね噺》引发讨论",
+            "summary": "日本人气动漫《ちいかわ》（Chiikawa）剧场版消息引发粉丝期待，同时《あかね噺》（落语题材动漫）也成为热议话题，展现日本动漫文化的持续影响力。",
+            "posts_count": 6,
+            "sentiment": "positive",
+            "sentiment_label": "积极期待",
+            "tags": ["ちいかわ", "あかね噺", "动漫", "日本文化", "剧场版"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_406",
+            "date": "2026-02-26",
+            "category": "泰国娱乐",
+            "icon": "🇹🇭",
+            "title": "泰剧《Dare You To Death》迎来大结局",
+            "summary": "热门泰剧《Dare You To Death》播出最终集，粉丝在社交媒体上热烈讨论剧情发展和结局。泰国娱乐内容在东南亚地区持续保持高人气。",
+            "posts_count": 4,
+            "sentiment": "positive",
+            "sentiment_label": "积极热议",
+            "tags": ["泰剧", "DareYouToDeath", "泰国娱乐", "BL"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_407",
+            "date": "2026-02-26",
+            "category": "品牌营销",
+            "icon": "🥤",
+            "title": "百事可乐东南亚明星联动营销",
+            "summary": "百事可乐（Pepsi）在东南亚市场推出多项明星联动营销活动，包括与 EST、EMIBONNIE、JUNIORMARK 等艺人合作，话题 #PEPSI TREATS 登上趋势榜。",
+            "posts_count": 8,
+            "sentiment": "positive",
+            "sentiment_label": "积极关注",
+            "tags": ["Pepsi", "百事可乐", "东南亚", "明星营销", "泰国"],
+            "sources": ["X Trending"]
+        },
+        {
+            "id": "evt_20260226_408",
+            "date": "2026-02-26",
+            "category": "游戏娱乐",
+            "icon": "🎮",
+            "title": "《宝可梦》新内容发布与游戏动态",
+            "summary": "《宝可梦》系列（ポケモンプレゼンツ）新内容发布引发玩家热议，同时《孤独的美食家》十周年纪念和《进击的巨人》相关话题也保持热度。",
+            "posts_count": 5,
+            "sentiment": "positive",
+            "sentiment_label": "积极期待",
+            "tags": ["宝可梦", "ポケモン", "游戏", "日本", "动漫"],
+            "sources": ["X Trending"]
+        },
+        // ========== 2026-02-26 历史事件（保留） ==========
         {
             "id": "evt_20260226_301",
             "date": "2026-02-26",
@@ -219,7 +324,6 @@
             "tags": ["Ocado", "裁员", "零售", "科技", "英国"],
             "sources": ["@BBCNews"]
         },
-        // ========== 历史事件（保留） ==========
         {
             "id": "evt_20260226_201",
             "date": "2026-02-26",
