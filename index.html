@@ -113,11 +113,11 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">10</div>
+                <div class="stat-number" id="total-events">6</div>
                 <div class="stat-label">今日事件数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">21</div>
+                <div class="stat-number" id="total-posts">7</div>
                 <div class="stat-label">分析帖子总数</div>
             </div>
             <div class="stat-card">
@@ -131,7 +131,7 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 05:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 12:10 PM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
@@ -139,6 +139,125 @@
     <script>
         // X Events Archive Data - Historical + Today's Events
         const X_EVENTS_ARCHIVE = [
+        {
+                "id": "evt_20260226_101",
+                "date": "2026-02-26",
+                "category": "科技行业动态",
+                "icon": "📰",
+                "title": "科技行业动态",
+                "summary": "Larry Page 已正式移居佛罗里达，引发对加州财富税政策的讨论。同时有对科技企业文化和高管离职的讨论。",
+                "posts_count": 1,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "科技新闻",
+                        "Google",
+                        "政策"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@paulg"
+                ]
+        },
+        {
+                "id": "evt_20260226_102",
+                "date": "2026-02-26",
+                "category": "AI 视频生成",
+                "icon": "🎬",
+                "title": "AI 视频生成争议",
+                "summary": "Seedance 2 已在 CapCut 上线，但社区评价两极分化。有用户认为当前生成的视频质量一般，多为过去 8 个月已能实现的内容。Dreami 也发布了重大更新。",
+                "posts_count": 1,
+                "sentiment": "neutral",
+                "sentiment_label": "中性讨论",
+                "tags": [
+                        "AI视频",
+                        "Seedance",
+                        "CapCut"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@Mho_23"
+                ]
+        },
+        {
+                "id": "evt_20260226_103",
+                "date": "2026-02-26",
+                "category": "特斯拉/自动驾驶",
+                "icon": "🚗",
+                "title": "特斯拉自动驾驶进展",
+                "summary": "Tesla 为 8 年老车推送更新，Scoble 预测按此速度，几周内将实现完全无需注意的自动驾驶，最迟夏季达成。",
+                "posts_count": 1,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "特斯拉",
+                        "自动驾驶",
+                        "FSD"
+                ],
+                "sources": [
+                        "@Scobleizer"
+                ]
+        },
+        {
+                "id": "evt_20260226_104",
+                "date": "2026-02-26",
+                "category": "AI 播客/内容",
+                "icon": "🎙️",
+                "title": "AI 播客新内容",
+                "summary": "This Week in AI 新一期节目发布，Jason 与 WisprFlow 创始人深入交流，讨论 AI 语音和交互技术的最新进展。",
+                "posts_count": 1,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "播客",
+                        "WisprFlow",
+                        "AI语音"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@ThisWeeknAI"
+                ]
+        },
+        {
+                "id": "evt_20260226_105",
+                "date": "2026-02-26",
+                "category": "OpenClaw 生态",
+                "icon": "🦞",
+                "title": "OpenClaw 生态持续活跃",
+                "summary": "OpenClaw 生态持续活跃，用户忙于使用 OpenClaw 进行各种开发工作。Perplexity Computer 被评价为面向普通人的 OpenClaw。",
+                "posts_count": 2,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "OpenClaw",
+                        "AI Agent",
+                        "Perplexity"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@natjjin"
+                ]
+        },
+        {
+                "id": "evt_20260226_106",
+                "date": "2026-02-26",
+                "category": "NVIDIA 新品发布",
+                "icon": "🎮",
+                "title": "NVIDIA Vera Rubin 发布",
+                "summary": "NVIDIA 发布新一代 Vera Rubin 架构，预计 2026 年下半年出货。性能相比 Blackwell 提升 10 倍，能效比提升 10 倍。网络业务收入同比增长 263%，盘后股价上涨。",
+                "posts_count": 1,
+                "sentiment": "positive",
+                "sentiment_label": "积极热议",
+                "tags": [
+                        "NVIDIA",
+                        "Vera Rubin",
+                        "GPU"
+                ],
+                "sources": [
+                        "@Scobleizer",
+                        "@minchoi"
+                ]
+        },
         {
                 "id": "evt_20260226_001",
                 "date": "2026-02-26",
