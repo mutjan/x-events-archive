@@ -114,15 +114,15 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">16</div>
+                <div class="stat-number" id="total-events">21</div>
                 <div class="stat-label">今日事件</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">70+</div>
+                <div class="stat-number" id="total-posts">85+</div>
                 <div class="stat-label">相关推文</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">62%</div>
+                <div class="stat-number" id="positive-rate">67%</div>
                 <div class="stat-label">积极情绪占比</div>
             </div>
         </div>
@@ -132,16 +132,82 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 03:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 04:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
 
     <script>
         // X Events Archive Data - Historical + Today's Events
-        // Updated: 2026-02-27 03:00 AM CST
+        // Updated: 2026-02-27 04:00 AM CST
         const X_EVENTS_ARCHIVE = [
-        // ========== 2026-02-27 03:00 新事件 ==========
+        // ========== 2026-02-27 04:00 新事件 ==========
+        {
+            "id": "evt_20260227_701",
+            "date": "2026-02-27",
+            "category": "AI 芯片",
+            "icon": "🖥️",
+            "title": "Nvidia Vera Rubin AI 系统正式发布",
+            "summary": "Nvidia 在 Q4 财报中正式发布 Vera Rubin AI 系统，预计 2026 年下半年出货。新系统性能功耗比相比 Blackwell 提升 10 倍，采用模块化设计和液冷技术。Anthropic 已承诺使用 Grace Blackwell 和 Vera Rubin 系统进行训练和推理。",
+            "posts_count": 8,
+            "sentiment": "positive",
+            "sentiment_label": "技术突破",
+            "tags": ["Nvidia", "Vera Rubin", "AI芯片", "Blackwell", "数据中心"],
+            "sources": ["X RSS", "@Nvidia"]
+        },
+        {
+            "id": "evt_20260227_702",
+            "date": "2026-02-27",
+            "category": "AI 手机",
+            "icon": "📱",
+            "title": "三星 Galaxy S26 系列发布，主打 Agentic AI",
+            "summary": "三星发布 Galaxy S26 系列，与 Google 深度合作集成 Gemini Agentic AI 功能。用户可通过语音指令完成点餐、叫车等复杂多步骤任务。S26 Ultra 配备隐私显示屏，侧面视角不可见。S26 和 S26+ 涨价 100 美元。",
+            "posts_count": 6,
+            "sentiment": "positive",
+            "sentiment_label": "产品创新",
+            "tags": ["Samsung", "Galaxy S26", "Gemini", "Agentic AI", "Google"],
+            "sources": ["X RSS", "@Samsung"]
+        },
+        {
+            "id": "evt_20260227_703",
+            "date": "2026-02-27",
+            "category": "AI 企业",
+            "icon": "🏢",
+            "title": "OpenClaw MakeX 企业 AI 运维团队发布",
+            "summary": "OpenClaw 推出面向企业的 MakeX AI 运维团队解决方案，可接入 Shopify、HubSpot、Stripe、Sheets 等 100+ 集成。该产品定位为 AI 运维团队，帮助企业自动化日常运营任务，引发企业级 AI Agent 应用讨论。",
+            "posts_count": 5,
+            "sentiment": "positive",
+            "sentiment_label": "企业应用",
+            "tags": ["OpenClaw", "MakeX", "企业AI", "自动化", "SaaS"],
+            "sources": ["X RSS", "@openclaw"]
+        },
+        {
+            "id": "evt_20260227_704",
+            "date": "2026-02-27",
+            "category": "AI 投资",
+            "icon": "💰",
+            "title": "Nvidia 向 Anthropic 投资最高 100 亿美元",
+            "summary": "Nvidia 宣布向 Anthropic 投资最高 100 亿美元，Anthropic 将使用 Grace Blackwell 和 Vera Rubin 系统训练 Claude 模型。这是 Nvidia 在 AI 模型公司中的重大布局，显示其对 Claude Cowork 平台的高度认可。",
+            "posts_count": 4,
+            "sentiment": "positive",
+            "sentiment_label": "投资利好",
+            "tags": ["Nvidia", "Anthropic", "Claude", "AI投资", "战略合作"],
+            "sources": ["X RSS", "@Anthropic"]
+        },
+        {
+            "id": "evt_20260227_705",
+            "date": "2026-02-27",
+            "category": "AI 财报",
+            "icon": "📊",
+            "title": "Nvidia Q4 财报：营收 681 亿美元超预期",
+            "summary": "Nvidia 发布 Q4 财报，营收同比增长 73% 至 681.3 亿美元（预期 662.1 亿），数据中心收入达 623 亿美元增长 75%。公司预测 Q1 营收将继续超预期，Blackwell 芯片需求强劲。盘后股价波动。",
+            "posts_count": 7,
+            "sentiment": "positive",
+            "sentiment_label": "业绩亮眼",
+            "tags": ["Nvidia", "财报", "数据中心", "AI芯片", "业绩"],
+            "sources": ["X RSS", "@Nvidia"]
+        },
+        // ========== 2026-02-27 03:00 历史事件 (保留) ==========
         {
             "id": "evt_20260227_601",
             "date": "2026-02-27",
@@ -198,7 +264,7 @@
             "id": "evt_20260227_605",
             "date": "2026-02-27",
             "category": "AI 金融",
-            "icon": "📊",
+            "icon": "📈",
             "title": "Perplexity 挑战 Bloomberg Terminal 地位",
             "summary": "Perplexity 成为首家真正与 Bloomberg Terminal 竞争的 AI 公司，其金融数据服务引发市场关注。这一发展被视为 AI 在专业金融工具领域的重要突破。",
             "posts_count": 2,
