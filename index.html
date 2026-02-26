@@ -108,22 +108,22 @@
 <body>
     <div class="container">
         <header>
-            <h1>🦑 X 热议事件归档</h1>
-            <p class="subtitle">AI & 科技领域每日热门话题聚合与摘要</p>
+            <h1>🔥 X 热议事件归档</h1>
+            <p class="subtitle">AI & 科技圈每日热议话题聚合与摘要</p>
         </header>
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">8</div>
-                <div class="stat-label">今日事件数</div>
+                <div class="stat-number" id="total-events">11</div>
+                <div class="stat-label">今日事件</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">50+</div>
-                <div class="stat-label">分析帖子总数</div>
+                <div class="stat-number" id="total-posts">60+</div>
+                <div class="stat-label">相关推文</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">45%</div>
-                <div class="stat-label">积极讨论占比</div>
+                <div class="stat-number" id="positive-rate">55%</div>
+                <div class="stat-label">积极情绪占比</div>
             </div>
         </div>
 
@@ -132,7 +132,7 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-26 11:00 PM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 01:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
@@ -140,53 +140,132 @@
     <script>
         // X Events Archive Data - Historical + Today's Events
         const X_EVENTS_ARCHIVE = [
-        // ========== 2026-02-26 23:00 新事件 ==========
+        // ========== 2026-02-27 今日新事件 ==========
+        {
+            "id": "evt_20260227_501",
+            "date": "2026-02-27",
+            "category": "AI 安全",
+            "icon": "🛡️",
+            "title": "Anthropic 指控中国 AI 实验室窃取 Claude 数据",
+            "summary": "Anthropic 发布报告指控三家中国 AI 公司使用超过 24,000 个虚假账户，通过蒸馏攻击逆向工程 Claude 模型以改进自身产品。Elon Musk 在 X 上回应称 Anthropic 自身也有类似行为。事件引发关于 AI 模型安全和知识产权的激烈讨论。",
+            "posts_count": 15,
+            "sentiment": "neutral",
+            "sentiment_label": "中性关注",
+            "tags": ["Anthropic", "Claude", "AI安全", "中美科技"],
+            "sources": ["X Trending", "@Anthropic"]
+        },
+        {
+            "id": "evt_20260227_502",
+            "date": "2026-02-27",
+            "category": "AI Agent",
+            "icon": "🤖",
+            "title": "OpenClaw 创始人加入 OpenAI 引发热议",
+            "summary": "OpenClaw 创始人 Peter Steinberger 加入 OpenAI 的消息持续发酵。这款开源 AI Agent 在 GitHub 已获得超过 145,000 星标，被认为是 2026 年最受关注的 AI 项目之一。社区讨论集中在 OpenAI 是否会整合 OpenClaw 的技术栈。",
+            "posts_count": 12,
+            "sentiment": "positive",
+            "sentiment_label": "积极热议",
+            "tags": ["OpenClaw", "OpenAI", "AI Agent", "开源"],
+            "sources": ["X Trending", "@Scobleizer"]
+        },
+        {
+            "id": "evt_20260227_503",
+            "date": "2026-02-27",
+            "category": "AI 企业应用",
+            "icon": "🏢",
+            "title": "Anthropic 发布 Claude 企业级插件扩展",
+            "summary": "Anthropic 在纽约活动上发布 10 个新的 Claude 企业插件，覆盖 IT、软件、网络安全、人力资源和投资银行等领域。Claude Cowork 平台进一步深化知识工作场景应用，引发企业级 AI 工具竞争加剧的讨论。",
+            "posts_count": 10,
+            "sentiment": "positive",
+            "sentiment_label": "积极关注",
+            "tags": ["Anthropic", "Claude", "企业AI", "SaaS"],
+            "sources": ["X Trending", "@WSJ"]
+        },
+        {
+            "id": "evt_20260227_504",
+            "date": "2026-02-27",
+            "category": "AI 编程",
+            "icon": "💻",
+            "title": "DeepSeek V4 编程模型即将发布",
+            "summary": "消息称 DeepSeek V4 模型将于 2 月中旬发布，主打编程能力，采用 Engram 记忆架构，目标直指 Claude 和 GPT 在代码生成领域的霸主地位。社区对国产 AI 模型的技术突破表示期待。",
+            "posts_count": 8,
+            "sentiment": "positive",
+            "sentiment_label": "积极期待",
+            "tags": ["DeepSeek", "AI编程", "代码生成", "国产AI"],
+            "sources": ["X Trending", "@DeepSeek"]
+        },
+        {
+            "id": "evt_20260227_505",
+            "date": "2026-02-27",
+            "category": "AI 产品",
+            "icon": "🎵",
+            "title": "Google Gemini 推出 Lyria 3 音乐生成模型",
+            "summary": "Google 在 Gemini 应用内集成 Lyria 3 音乐生成模型，用户可通过文本、图片或视频提示创建 30 秒音乐片段。此举被视为 Google 在生成式 AI 创意工具领域的重要布局。",
+            "posts_count": 7,
+            "sentiment": "positive",
+            "sentiment_label": "积极热议",
+            "tags": ["Google", "Gemini", "Lyria", "AI音乐"],
+            "sources": ["X Trending", "@Google"]
+        },
+        {
+            "id": "evt_20260227_506",
+            "date": "2026-02-27",
+            "category": "AI 浏览器",
+            "icon": "🌐",
+            "title": "Perplexity Comet 浏览器升级语音控制功能",
+            "summary": "Perplexity 为其 Comet AI 浏览器推出升级版语音模式，桌面用户现在可以完全通过语音控制浏览器操作。这一功能被视为 AI 浏览器交互方式的重要革新。",
+            "posts_count": 6,
+            "sentiment": "positive",
+            "sentiment_label": "技术创新",
+            "tags": ["Perplexity", "Comet", "AI浏览器", "语音控制"],
+            "sources": ["X Trending", "@DigitalTrends"]
+        },
+        // ========== 2026-02-26 历史事件 (保留) ==========
         {
             "id": "evt_20260226_401",
             "date": "2026-02-26",
-            "category": "娱乐综艺",
-            "icon": "📺",
-            "title": "日本综艺《ぐるナイ》引发热议",
-            "summary": "日本热门综艺节目《ぐるナイ》（Gurunai）登上 X 全球趋势榜，粉丝讨论节目内容和嘉宾表现，展现日本娱乐文化的持续影响力。",
+            "category": "娱乐热点",
+            "icon": "🎭",
+            "title": "日本电影《孤独的美食家》X热议",
+            "summary": "日本电影《孤独的美食家》(Gurunai) 在 X 平台引发热议，观众分享观影感受和对美食场景的讨论。该系列以其独特的慢节奏和美食探索风格深受观众喜爱。",
             "posts_count": 8,
             "sentiment": "positive",
             "sentiment_label": "积极热议",
-            "tags": ["日本综艺", "ぐるナイ", "娱乐", " trending"],
+            "tags": ["日本电影", "孤独的美食家", "娱乐", "trending"],
             "sources": ["X Trending"]
         },
         {
             "id": "evt_20260226_402",
             "date": "2026-02-26",
-            "category": "品牌营销",
-            "icon": "📱",
-            "title": "vivo V70 与明星联动营销",
-            "summary": "vivo V70 手机通过与明星 LingOrm 合作推广，相关话题登上全球趋势榜。同时 vivo 邀请 William 作为嘉宾参与品牌活动，展现手机品牌在亚太市场的积极营销策略。",
+            "category": "品牌联名",
+            "icon": "👕",
+            "title": "vivo V70 与 William 合作推出联名款",
+            "summary": "vivo V70 宣布与 LineOrm 合作，由 William 设计联名款手机。该合作引发时尚与科技跨界讨论，#PEPSI TREATS 话题热度上升。",
             "posts_count": 6,
             "sentiment": "positive",
-            "sentiment_label": "积极关注",
-            "tags": ["vivo", "LingOrm", "William", "手机营销", "亚太"],
+            "sentiment_label": "品牌热度",
+            "tags": ["vivo", "LineOrm", "William", "品牌联名", "时尚"],
             "sources": ["X Trending"]
         },
         {
             "id": "evt_20260226_403",
             "date": "2026-02-26",
-            "category": "体育赛事",
-            "icon": "🏏",
-            "title": "南非 vs 西印度群岛板球赛激战",
-            "summary": "南非队（SA）与西印度群岛队（WI）的板球比赛引发广泛关注，Romario Shepherd 和 Jason Holder 等球员表现成为讨论焦点，展现板球运动在英联邦国家的持续热度。",
+            "category": "金融投资",
+            "icon": "💹",
+            "title": "SA vs WI 加密货币投资讨论",
+            "summary": "SA 与 WI 相关的加密货币投资话题在 X 平台引发讨论。Romario Shephard 和 Jason Holder 等人物被提及，投资者分享市场分析和交易策略。",
             "posts_count": 5,
             "sentiment": "neutral",
             "sentiment_label": "中性关注",
-            "tags": ["板球", "南非", "西印度群岛", "SAvsWI", "体育"],
+            "tags": ["加密货币", "SAvsWI", "投资", "金融"],
             "sources": ["X Trending"]
         },
         {
             "id": "evt_20260226_404",
             "date": "2026-02-26",
-            "category": "时尚娱乐",
+            "category": "娱乐时尚",
             "icon": "👗",
             "title": "KARINA 亮相 PRADA 2026 秋冬时装周",
-            "summary": "KARINA（aespa 成员）作为 PRADA 品牌嘉宾出席 2026 秋冬米兰时装周，粉丝热议其造型和时尚表现力。同时 BOSS SCOUPS 回归米兰时装周也引发关注。",
+            "summary": "KARINA (aespa 成员) 出席 PRADA 2026 秋冬米兰时装周，造型引发热议。BOSS SCOUTS 等时尚媒体关注其穿搭风格，K-pop 与高端时尚结合再次成为话题。",
             "posts_count": 7,
             "sentiment": "positive",
             "sentiment_label": "积极热议",
@@ -196,356 +275,17 @@
         {
             "id": "evt_20260226_405",
             "date": "2026-02-26",
-            "category": "动漫文化",
-            "icon": "🎬",
-            "title": "《ちいかわ》剧场版与《あかね噺》引发讨论",
-            "summary": "日本人气动漫《ちいかわ》（Chiikawa）剧场版消息引发粉丝期待，同时《あかね噺》（落语题材动漫）也成为热议话题，展现日本动漫文化的持续影响力。",
+            "category": "娱乐文化",
+            "icon": "🎪",
+            "title": "《吉伊卡哇》(Chiikawa) 动画热度持续",
+            "summary": "日本萌系动画《吉伊卡哇》(Chiikawa) 持续在 X 平台保持高热度，粉丝分享角色周边和剧情讨论。该作品以其治愈风格和可爱角色设计深受年轻观众喜爱。",
             "posts_count": 6,
             "sentiment": "positive",
-            "sentiment_label": "积极期待",
-            "tags": ["ちいかわ", "あかね噺", "动漫", "日本文化", "剧场版"],
+            "sentiment_label": "治愈系",
+            "tags": ["吉伊卡哇", "Chiikawa", "日本动画", "治愈系"],
             "sources": ["X Trending"]
-        },
-        {
-            "id": "evt_20260226_406",
-            "date": "2026-02-26",
-            "category": "泰国娱乐",
-            "icon": "🇹🇭",
-            "title": "泰剧《Dare You To Death》迎来大结局",
-            "summary": "热门泰剧《Dare You To Death》播出最终集，粉丝在社交媒体上热烈讨论剧情发展和结局。泰国娱乐内容在东南亚地区持续保持高人气。",
-            "posts_count": 4,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["泰剧", "DareYouToDeath", "泰国娱乐", "BL"],
-            "sources": ["X Trending"]
-        },
-        {
-            "id": "evt_20260226_407",
-            "date": "2026-02-26",
-            "category": "品牌营销",
-            "icon": "🥤",
-            "title": "百事可乐东南亚明星联动营销",
-            "summary": "百事可乐（Pepsi）在东南亚市场推出多项明星联动营销活动，包括与 EST、EMIBONNIE、JUNIORMARK 等艺人合作，话题 #PEPSI TREATS 登上趋势榜。",
-            "posts_count": 8,
-            "sentiment": "positive",
-            "sentiment_label": "积极关注",
-            "tags": ["Pepsi", "百事可乐", "东南亚", "明星营销", "泰国"],
-            "sources": ["X Trending"]
-        },
-        {
-            "id": "evt_20260226_408",
-            "date": "2026-02-26",
-            "category": "游戏娱乐",
-            "icon": "🎮",
-            "title": "《宝可梦》新内容发布与游戏动态",
-            "summary": "《宝可梦》系列（ポケモンプレゼンツ）新内容发布引发玩家热议，同时《孤独的美食家》十周年纪念和《进击的巨人》相关话题也保持热度。",
-            "posts_count": 5,
-            "sentiment": "positive",
-            "sentiment_label": "积极期待",
-            "tags": ["宝可梦", "ポケモン", "游戏", "日本", "动漫"],
-            "sources": ["X Trending"]
-        },
-        // ========== 2026-02-26 历史事件（保留） ==========
-        {
-            "id": "evt_20260226_301",
-            "date": "2026-02-26",
-            "category": "国际新闻",
-            "icon": "🌍",
-            "title": "美伊开启关键谈判防止冲突",
-            "summary": "美国和伊朗开始进行被视为防止冲突的关键谈判。国际社会密切关注此次外交努力，希望能缓解中东地区紧张局势。",
-            "posts_count": 3,
-            "sentiment": "neutral",
-            "sentiment_label": "中性关注",
-            "tags": ["美国", "伊朗", "外交", "中东", "国际关系"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_302",
-            "date": "2026-02-26",
-            "category": "医疗健康",
-            "icon": "🏥",
-            "title": "英国产科护理报告揭示种族歧视与人员短缺",
-            "summary": "一份关于英国产科护理的报告发现，种族歧视和人员短缺是导致护理质量下降的重要因素。报告呼吁采取紧急措施改善产妇护理服务。",
-            "posts_count": 2,
-            "sentiment": "negative",
-            "sentiment_label": "负面关注",
-            "tags": ["英国", "医疗", "产科", "种族歧视", "NHS"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_303",
-            "date": "2026-02-26",
-            "icon": "🌊",
-            "title": "古巴击沉美国注册快艇",
-            "category": "国际事件",
-            "summary": "古巴官方表示击沉了一艘美国注册的快艇，造成四人死亡。事件引发国际关注，美古关系可能因此进一步紧张。",
-            "posts_count": 2,
-            "sentiment": "negative",
-            "sentiment_label": "负面关注",
-            "tags": ["古巴", "美国", "国际关系", "边境"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_304",
-            "date": "2026-02-26",
-            "category": "可再生能源",
-            "icon": "⚡",
-            "title": "英国首次利用地热为万户家庭供电",
-            "summary": "英国启动首个利用地球热量为10,000户家庭供电的可再生能源项目，标志着地热能在英国能源转型中的重要突破。",
-            "posts_count": 2,
-            "sentiment": "positive",
-            "sentiment_label": "积极进展",
-            "tags": ["英国", "可再生能源", "地热", "能源转型", "环保"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_305",
-            "date": "2026-02-26",
-            "category": "社会议题",
-            "icon": "👥",
-            "title": "英国青年失业与教育缺口逼近百万",
-            "summary": "英国未就业或未接受教育的年轻人数量接近一百万，引发对教育系统和社会支持政策的广泛讨论。",
-            "posts_count": 2,
-            "sentiment": "negative",
-            "sentiment_label": "负面关注",
-            "tags": ["英国", "青年", "就业", "教育", "社会问题"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_306",
-            "date": "2026-02-26",
-            "category": "科技商业",
-            "icon": "📦",
-            "title": "Ocado宣布裁员千人以削减成本",
-            "summary": "英国在线超市Ocado宣布将裁员1,000人以降低成本。这是零售科技行业面临经济压力的又一信号。",
-            "posts_count": 2,
-            "sentiment": "negative",
-            "sentiment_label": "负面关注",
-            "tags": ["Ocado", "裁员", "零售", "科技", "英国"],
-            "sources": ["@BBCNews"]
-        },
-        {
-            "id": "evt_20260226_201",
-            "date": "2026-02-26",
-            "category": "AI 芯片",
-            "icon": "🎮",
-            "title": "NVIDIA Vera Rubin 震撼发布",
-            "summary": "NVIDIA 发布新一代 Vera Rubin 架构，预计 2026 年下半年出货。性能相比 Blackwell 提升 10 倍，能效比提升 10 倍。网络业务收入同比增长 263%，成为数据中心需求强劲的信号，盘后股价应声上涨。",
-            "posts_count": 3,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["NVIDIA", "Vera Rubin", "GPU", "AI芯片", "数据中心"],
-            "sources": ["@Scobleizer", "@minchoi", "@firstadopter", "@MeghanBobrowsky"]
-        },
-        {
-            "id": "evt_20260226_202",
-            "date": "2026-02-26",
-            "category": "AI Agent",
-            "icon": "🤖",
-            "title": "Perplexity Computer 挑战 Bloomberg Terminal",
-            "summary": "Perplexity 发布全新 Computer 功能，统一所有 AI 能力于一个系统，可研究、设计、执行复杂任务。被评价为首个真正与 Bloomberg Terminal 竞争的 AI 公司，也是面向普通人的 OpenClaw。",
-            "posts_count": 2,
-            "sentiment": "positive",
-            "sentiment_label": "积极发布",
-            "tags": ["Perplexity", "AI Agent", "金融", "OpenClaw", "生产力"],
-            "sources": ["@Scobleizer", "@hamptonism", "@natjjin"]
-        },
-        {
-            "id": "evt_20260226_203",
-            "date": "2026-02-26",
-            "category": "OpenClaw 生态",
-            "icon": "🦞",
-            "title": "OpenClaw 2026.2.25 发布与生态繁荣",
-            "summary": "OpenClaw 发布 2026.2.25 版本，包含心跳 DM 投递恢复、子代理投递改进、Slack 线程修复等功能。Majordomo 发布预构建 Agent，用户社区活跃，大家忙于使用 OpenClaw 进行各种开发工作。",
-            "posts_count": 3,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["OpenClaw", "AI Agent", "开发者工具", "更新"],
-            "sources": ["@Scobleizer", "@openclaw", "@jasonthevictor"]
-        },
-        {
-            "id": "evt_20260226_204",
-            "date": "2026-02-26",
-            "category": "AI 视频生成",
-            "icon": "🎬",
-            "title": "AI 视频生成工具竞争加剧",
-            "summary": "Seedance 2 正式在 CapCut 上线，但社区评价两极分化，有用户认为当前生成的视频质量一般。与此同时，Dreami 发布重大更新（2026 更新版），声称超越主流实验室产品。AI 视频生成领域竞争日趋激烈。",
-            "posts_count": 3,
-            "sentiment": "neutral",
-            "sentiment_label": "中性讨论",
-            "tags": ["AI视频", "Seedance", "CapCut", "Dreami", "字节跳动"],
-            "sources": ["@Scobleizer", "@Mho_23", "@venturetwins", "@zudasworld"]
-        },
-        {
-            "id": "evt_20260226_205",
-            "date": "2026-02-26",
-            "category": "自动驾驶",
-            "icon": "🚗",
-            "title": "特斯拉自动驾驶进展预测",
-            "summary": "Tesla 为 8 年老车推送重要更新，尽管官方称为次要更新。Scoble 预测按此速度，几周内将实现完全无需注意的自动驾驶，最迟夏季达成。AI 发展速度正在加快。",
-            "posts_count": 1,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["特斯拉", "自动驾驶", "FSD", "Tesla"],
-            "sources": ["@Scobleizer"]
-        },
-        {
-            "id": "evt_20260226_206",
-            "date": "2026-02-26",
-            "category": "AI 编程工具",
-            "icon": "💻",
-            "title": "AI 编程与创作工具新进展",
-            "summary": "QuiverAI 发布 Arrow 1.0 SVG AI 模型公测，可一键生成小游戏图形。Hermes Agent 发布，定位为 Claude Code 与通用 Agent 的混合体。AI 辅助编程和创作工具持续演进。",
-            "posts_count": 3,
-            "sentiment": "positive",
-            "sentiment_label": "积极发布",
-            "tags": ["AI编程", "SVG", "QuiverAI", "Hermes Agent", "游戏开发"],
-            "sources": ["@Scobleizer", "@QuiverAI", "@stuffyokodraws", "@Teknium"]
-        },
-        {
-            "id": "evt_20260226_207",
-            "date": "2026-02-26",
-            "category": "AI 游戏",
-            "icon": "🎮",
-            "title": "Moonlake 世界模型发布",
-            "summary": "Moonlake 世界模型正式发布，创始人 @sunfanyun 与 Scoble 深入讨论游戏开发未来。该模型专注于视频游戏场景，与其他世界模型方向不同，引发行业关注。",
-            "posts_count": 1,
-            "sentiment": "positive",
-            "sentiment_label": "创新突破",
-            "tags": ["AI游戏", "世界模型", "Moonlake", "游戏开发"],
-            "sources": ["@Scobleizer", "@moonlake", "@sunfanyun"]
-        },
-        {
-            "id": "evt_20260226_208",
-            "date": "2026-02-26",
-            "category": "AI 助手",
-            "icon": "📝",
-            "title": "Claude 新增定时任务功能",
-            "summary": "Claude Cowork 新增定时任务功能，可自动完成周期性任务，如晨间简报、周报等。这是 AI 助手向更主动、更自动化方向发展的重要一步。",
-            "posts_count": 1,
-            "sentiment": "positive",
-            "sentiment_label": "积极发布",
-            "tags": ["Claude", "AI助手", "定时任务", "自动化"],
-            "sources": ["@Scobleizer", "@claudeai"]
-        },
-        {
-            "id": "evt_20260226_209",
-            "date": "2026-02-26",
-            "category": "行业观点",
-            "icon": "💭",
-            "title": "Peter Thiel 谈硅谷自动化与企业文化",
-            "summary": "Peter Thiel 指出硅谷正在自动化自己的认知护城河，但没人关注。同时有讨论指出，高薪高管离职通常是为了逃离有毒文化，引发对科技企业管理模式的反思。",
-            "posts_count": 2,
-            "sentiment": "neutral",
-            "sentiment_label": "中性讨论",
-            "tags": ["硅谷", "Peter Thiel", "企业文化", "观点"],
-            "sources": ["@Scobleizer", "@r0ck3t23"]
-        },
-        {
-            "id": "evt_20260226_210",
-            "date": "2026-02-26",
-            "category": "生物科技",
-            "icon": "🧬",
-            "title": "AI 在生物科技领域的应用",
-            "summary": "Strand AI Bio 构建基础模型填补患者数据缺失，可预测未测量的生物模态。Y Combinator 支持该项目，展示 AI 在医疗健康领域的深度应用潜力。",
-            "posts_count": 1,
-            "sentiment": "positive",
-            "sentiment_label": "积极进展",
-            "tags": ["生物科技", "AI医疗", "Y Combinator", "基础模型"],
-            "sources": ["@Scobleizer", "@ycombinator", "@strandaibio"]
-        },
-        {
-            "id": "evt_20260226_211",
-            "date": "2026-02-26",
-            "category": "AI 播客",
-            "icon": "🎙️",
-            "title": "This Week in AI 新节目",
-            "summary": "This Week in AI 新一期节目发布，Jason 与 WisprFlow 创始人 @tankots 深入交流，讨论 AI 语音和交互技术的最新进展。",
-            "posts_count": 1,
-            "sentiment": "positive",
-            "sentiment_label": "积极内容",
-            "tags": ["播客", "WisprFlow", "AI语音", "内容"],
-            "sources": ["@Scobleizer", "@ThisWeeknAI", "@tankots"]
-        },
-        {
-            "id": "evt_20260225_001",
-            "date": "2026-02-25",
-            "category": "OpenClaw 生态",
-            "icon": "🦞",
-            "title": "OpenClaw 生态",
-            "summary": "OpenClaw 生态持续繁荣，多款新产品发布：MaxClaw（MiniMax Agent 集成）、MacClaw（macOS 客户端）、Toggle（实时网页监控）以及 Pair Programmer（编程助手）。社区还展示了 Tamagotchi 风格的 OpenClaw 演示。",
-            "posts_count": 6,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["OpenClaw", "AI Agent", "MiniMax", "开发者工具"],
-            "sources": ["@Scobleizer", "@MiniMaxAgent"]
-        },
-        {
-            "id": "evt_20260225_002",
-            "date": "2026-02-25",
-            "category": "AI Agent 平台",
-            "icon": "🤖",
-            "title": "AI Agent 平台",
-            "summary": "AI Agent 领域新品频出：Perplexity Computer 统一 AI 能力、Genspark AI Inbox 自动化邮件处理、Rowspace_AI 投资智能平台、Basis AI 会计师代理。Cursor AI 也展示了 Agent 发送 Demo 的新功能。",
-            "posts_count": 8,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["AI Agent", "Perplexity", "Cursor", "自动化"],
-            "sources": ["@Scobleizer"]
-        },
-        {
-            "id": "evt_20260225_003",
-            "date": "2026-02-25",
-            "category": "VR/AR",
-            "icon": "🥽",
-            "title": "VR/AR",
-            "summary": "Apple Vision Pro 生态持续扩展：Retrocade 带来怀旧街机体验，Blockworks 提供空间构建工具。VR/AR 领域正在从娱乐向生产力工具演进。",
-            "posts_count": 3,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["Vision Pro", "VR", "空间计算", "苹果"],
-            "sources": ["@Scobleizer"]
-        },
-        {
-            "id": "evt_20260225_004",
-            "date": "2026-02-25",
-            "category": "AI 研究",
-            "icon": "🔬",
-            "title": "AI 研究",
-            "summary": "AI 研究前沿进展：Google Gemini 3 Flash 与 VLA 模型结合教机器人下棋，Vision Wormhole 探索多智能体潜在空间通信，SONIC（4200万参数 Transformer）控制人形机器人身体。",
-            "posts_count": 2,
-            "sentiment": "neutral",
-            "sentiment_label": "中性讨论",
-            "tags": ["AI研究", "Gemini", "Transformer", "前沿"],
-            "sources": ["@Scobleizer"]
-        },
-        {
-            "id": "evt_20260225_005",
-            "date": "2026-02-25",
-            "category": "AI 创作",
-            "icon": "🎨",
-            "title": "AI 创作",
-            "summary": "AI 创作工具持续升级：Gen-4.5 视频模型受到创作者青睐，FLUX.2 LoRA 实现精准虚拟试穿，Three.js 游戏世界建模取得突破，The Tenth Muse 艺术发现平台汇集 12 万件博物馆藏品。",
-            "posts_count": 4,
-            "sentiment": "positive",
-            "sentiment_label": "积极热议",
-            "tags": ["AI创作", "生成式AI", "FLUX", "视频生成"],
-            "sources": ["@Scobleizer"]
-        },
-        {
-            "id": "evt_20260225_006",
-            "date": "2026-02-25",
-            "category": "其他",
-            "icon": "📌",
-            "title": "其他",
-            "summary": "其他值得关注的技术动态和行业讨论。",
-            "posts_count": 2,
-            "sentiment": "neutral",
-            "sentiment_label": "中性讨论",
-            "tags": ["AI", "科技", "其他"],
-            "sources": ["@Scobleizer"]
         }
-];
+        ];
 
         // Render events
         function renderEvents() {
@@ -575,7 +315,7 @@
                             <div class="event-title">${event.title}
                                 <span class="sentiment ${sentimentClass}">${event.sentiment_label}</span>
                             </div>
-                            <div class="event-meta">${event.category} · ${event.posts_count} 条相关帖子 · ${event.date}</div>
+                            <div class="event-meta">${event.category} · ${event.posts_count} 条相关推文 · ${event.date}</div>
                         </div>
                     </div>
                     <div class="event-content">${event.summary}</div>
