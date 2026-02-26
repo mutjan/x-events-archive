@@ -114,15 +114,15 @@
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">11</div>
+                <div class="stat-number" id="total-events">16</div>
                 <div class="stat-label">今日事件</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">60+</div>
+                <div class="stat-number" id="total-posts">70+</div>
                 <div class="stat-label">相关推文</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">55%</div>
+                <div class="stat-number" id="positive-rate">62%</div>
                 <div class="stat-label">积极情绪占比</div>
             </div>
         </div>
@@ -132,15 +132,82 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 01:00 AM CST</span></p>
+            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 03:00 AM CST</span></p>
             <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
         </div>
     </div>
 
     <script>
         // X Events Archive Data - Historical + Today's Events
+        // Updated: 2026-02-27 03:00 AM CST
         const X_EVENTS_ARCHIVE = [
-        // ========== 2026-02-27 今日新事件 ==========
+        // ========== 2026-02-27 03:00 新事件 ==========
+        {
+            "id": "evt_20260227_601",
+            "date": "2026-02-27",
+            "category": "AI 安全",
+            "icon": "🛡️",
+            "title": "Esprit AI 安全渗透测试工具发布",
+            "summary": "一款名为 Esprit 的 AI Agent 安全测试工具发布，能够自动对网站和代码库进行渗透测试。该工具声称可以替代年薪 20 万美元以上的安全团队，引发关于 AI 自动化安全测试的讨论。",
+            "posts_count": 3,
+            "sentiment": "neutral",
+            "sentiment_label": "技术关注",
+            "tags": ["AI安全", "渗透测试", "Esprit", "网络安全"],
+            "sources": ["X RSS", "@Scobleizer"]
+        },
+        {
+            "id": "evt_20260227_602",
+            "date": "2026-02-27",
+            "category": "AI Agent",
+            "icon": "🤖",
+            "title": "开源 AI Agent 操作系统发布 - 受 OpenClaw 启发",
+            "summary": "Akashi203 团队开源了一个 AI Agent 操作系统，使用 Rust 编写，共 13.7 万行代码，采用 MIT 许可证。开发者表示该项目深受 OpenClaw 启发，体现了开源 AI Agent 生态的蓬勃发展。",
+            "posts_count": 2,
+            "sentiment": "positive",
+            "sentiment_label": "开源热情",
+            "tags": ["OpenClaw", "AI Agent", "Rust", "开源", "操作系统"],
+            "sources": ["X RSS", "@Scobleizer"]
+        },
+        {
+            "id": "evt_20260227_603",
+            "date": "2026-02-27",
+            "category": "AI 行业观点",
+            "icon": "💡",
+            "title": "Peter Thiel 警告 AI 正在消除硅谷的认知护城河",
+            "summary": "Peter Thiel 在最新发言中指出，硅谷正在通过 AI 自动化消除自身的认知护城河，但当地似乎没有人真正关注这一问题。这一观点引发科技界对 AI 长期影响的深度思考。",
+            "posts_count": 2,
+            "sentiment": "neutral",
+            "sentiment_label": "深度思考",
+            "tags": ["Peter Thiel", "硅谷", "AI影响", "科技趋势"],
+            "sources": ["X RSS", "@Scobleizer"]
+        },
+        {
+            "id": "evt_20260227_604",
+            "date": "2026-02-27",
+            "category": "OpenClaw 生态",
+            "icon": "🦞",
+            "title": "OpenClaw 2026.2.25 版本更新发布",
+            "summary": "OpenClaw 发布 2026.2.25 版本，包含心跳 DM 投递修复、子代理投递系统重构、Slack 线程会话修复以及反应功能改进。同时，ClawHub 加强反欺诈措施，封禁 6 个诈骗账户并提高评论门槛。",
+            "posts_count": 4,
+            "sentiment": "positive",
+            "sentiment_label": "积极更新",
+            "tags": ["OpenClaw", "版本更新", "ClawHub", "反欺诈"],
+            "sources": ["X RSS", "@openclaw", "@steipete"]
+        },
+        {
+            "id": "evt_20260227_605",
+            "date": "2026-02-27",
+            "category": "AI 金融",
+            "icon": "📊",
+            "title": "Perplexity 挑战 Bloomberg Terminal 地位",
+            "summary": "Perplexity 成为首家真正与 Bloomberg Terminal 竞争的 AI 公司，其金融数据服务引发市场关注。这一发展被视为 AI 在专业金融工具领域的重要突破。",
+            "posts_count": 2,
+            "sentiment": "positive",
+            "sentiment_label": "行业突破",
+            "tags": ["Perplexity", "Bloomberg", "金融AI", "金融科技"],
+            "sources": ["X RSS", "@Scobleizer"]
+        },
+        // ========== 2026-02-27 02:00 历史事件 (保留) ==========
         {
             "id": "evt_20260227_501",
             "date": "2026-02-27",
