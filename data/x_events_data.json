@@ -199,8 +199,193 @@
       ],
       "timestamp": "2026-02-27T12:00:00Z",
       "date": "2026-02-27"
+    },
+    {
+      "id": "event_11",
+      "title": "Google-Meta TPU合作升级",
+      "summary": "Meta与Google Cloud签署了数十亿美元的TPU云合作协议，这是AI芯片领域的重要动态。Meta开始尝试使用TPU训练模型，显示出AI领导者愿意在GPU之外探索替代方案。同时Google正在与私募股权公司洽谈设立合资企业的可能性。",
+      "sentiment": "行业关注",
+      "keywords": ["Meta", "Google", "TPU", "芯片", "云合作", "数十亿"],
+      "posts": [
+        {
+          "author": "@theinformation",
+          "content": "Meta's move to train models on TPUs signals growing willingness among AI leaders to experiment beyond GPUs.",
+          "link": "https://x.com/theinformation/status/2027470053747138944"
+        },
+        {
+          "author": "@theinformation",
+          "content": "AI chip scoop relevant to Nvidia watchers: Google signs multibillion-dollar TPU cloud deal w/Meta Platforms",
+          "link": "https://x.com/theinformation/status/2027459747310370892"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_12",
+      "title": "OpenAI与Amazon 500亿美元投资合作",
+      "summary": "OpenAI与Amazon达成500亿美元投资协议，这一历史性融资将改变AI行业格局。这笔交易可能给Amazon云服务带来提振，而Microsoft将失去OpenAI独家合作的地位。The Information团队独家报道了此次融资的所有关键细节。",
+      "sentiment": "重大商业动态",
+      "keywords": ["OpenAI", "Amazon", "500亿", "投资", "Microsoft", "融资"],
+      "posts": [
+        {
+          "author": "@theinformation",
+          "content": "OpenAI's $110 billion in funding deals could give Amazon's cloud unit a boost, while Microsoft will lose the veneer of OpenAI exclusivity.",
+          "link": "https://x.com/theinformation/status/2027455322705572067"
+        },
+        {
+          "author": "@theinformation",
+          "content": "Wondering WTF Amazon's $50B investment into OAI means for OAI, AMZN, MSFT and Nvidia?",
+          "link": "https://x.com/theinformation/status/2027458853420298727"
+        },
+        {
+          "author": "@theinformation",
+          "content": "Amazing how @theinformation team has broken ALL the major details of this historic OpenAI fundraising",
+          "link": "https://x.com/theinformation/status/2027443455757029678"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_13",
+      "title": "Google AI产品密集发布",
+      "summary": "Google本周发布了一系列AI产品更新，包括Nano Banana 2（最先进的图像生成模型，支持多语言文本生成和创意图像）、Veo 3.1视频生成模型等。这些更新展示了Google在生成式AI领域的持续投入。",
+      "sentiment": "产品发布/积极",
+      "keywords": ["Google", "Nano Banana 2", "Veo 3.1", "图像生成", "AI模型"],
+      "posts": [
+        {
+          "author": "@GoogleAI",
+          "content": "This week we had a BUNCH of updates 🍌🍌 Nano Banana 2, our SoTA image generation model...",
+          "link": "https://x.com/GoogleAI/status/2027463725498720306"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_14",
+      "title": "Anthropic五角大楼争议持续发酵",
+      "summary": "Anthropic与美国国防部的对峙正在整个AI行业引发连锁反应，给OpenAI和Google带来了关于其模型军事使用的棘手问题。这一争议涉及AI伦理、国家安全与商业利益之间的复杂平衡。",
+      "sentiment": "争议/关注",
+      "keywords": ["Anthropic", "五角大楼", "军事AI", "OpenAI", "Google"],
+      "posts": [
+        {
+          "author": "@theinformation",
+          "content": "A Pentagon standoff with Anthropic is rippling across the AI industry, raising tough questions for OpenAI and Google about military use of their models.",
+          "link": "https://x.com/theinformation/status/2027462512631841021"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_15",
+      "title": "OpenAI Codex用户快速增长",
+      "summary": "OpenAI宣布Codex周活跃用户已达160万，是1月1日的3倍。这一数据显示出AI编程助手正在快速获得开发者社区的认可和采用。",
+      "sentiment": "积极/增长",
+      "keywords": ["OpenAI", "Codex", "编程助手", "用户增长", "开发者"],
+      "posts": [
+        {
+          "author": "@steipete",
+          "content": "OpenAI now has 1.6M weekly Codex users, 3x as much as it had on January 1st, per its blog.",
+          "link": "https://x.com/steipete/status/2027451396534993107"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_16",
+      "title": "AI聊天机器人广告信任危机",
+      "summary": "The Information专业调查显示，77%的聊天机器人用户不信任AI广告，且大多数人愿意为无广告体验付费。这一发现对AI公司的商业模式提出了重要挑战。",
+      "sentiment": "担忧/反思",
+      "keywords": ["AI广告", "信任度", "付费意愿", "商业模式", "用户调查"],
+      "posts": [
+        {
+          "author": "@theinformation",
+          "content": "The Information Pro Survey: 77% of chatbot users don't trust AI with ads—and most will pay to avoid them.",
+          "link": "https://x.com/theinformation/status/2027447417797251103"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_17",
+      "title": "OpenClaw社区热度持续",
+      "summary": "OpenClaw发布重要更新，社区反响热烈。用户反馈称这是使用AI编程最有趣且最成功的体验。该工具对于构建AI代理集群具有重要意义。",
+      "sentiment": "社区积极",
+      "keywords": ["OpenClaw", "AI编程", "代理集群", "更新", "社区"],
+      "posts": [
+        {
+          "author": "@steipete",
+          "content": "bring your clawwww",
+          "link": "https://x.com/steipete/status/2027465738559098964"
+        },
+        {
+          "author": "@steipete",
+          "content": "openclaw dropped a good update and this one is super important for your swarm",
+          "link": "https://x.com/steipete/status/2027450572614533442"
+        },
+        {
+          "author": "@LeaderBriefs",
+          "content": "Openclaw is the most fun AND SUCCESS I have had using AI, Coding and fulfilling initiatives",
+          "link": "https://x.com/steipete/status/2027445578158752033"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_18",
+      "title": "Perplexity首届开发者大会",
+      "summary": "Perplexity宣布举办首届开发者大会"Ask"，并为尚未加入的优秀开发者预留席位。这标志着Perplexity正在积极构建开发者生态系统。",
+      "sentiment": "行业活动/积极",
+      "keywords": ["Perplexity", "开发者大会", "Ask", "生态系统"],
+      "posts": [
+        {
+          "author": "@Scobleizer",
+          "content": "Introducing Ask. Perplexity's first developer conference. We're reserving some seats for standout devs...",
+          "link": "https://x.com/Scobleizer/status/2027447673981432071"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_19",
+      "title": "AI购物新模式探索",
+      "summary": "OpenAI、Google和Shopify正在探索一种新的购物模式——协议优先于浏览代理。这种模式可能改变未来的电商交互方式，使AI能够直接通过协议完成购物任务。",
+      "sentiment": "创新探索",
+      "keywords": ["OpenAI", "Google", "Shopify", "AI购物", "协议", "电商"],
+      "posts": [
+        {
+          "author": "@theinformation",
+          "content": "OpenAI, Google and Shopify are converging on a new model for shopping—protocols over browsing agents.",
+          "link": "https://x.com/theinformation/status/2027439851612581971"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "event_20",
+      "title": "加州智能眼镜隐私新规",
+      "summary": "加州参议院法案1130引入新规定，对在商店未经同意进行录音的智能眼镜使用者设立处罚。这是针对新兴AR/VR设备隐私问题的重要立法进展。",
+      "sentiment": "监管关注",
+      "keywords": ["加州", "智能眼镜", "隐私", "立法", "AR/VR"],
+      "posts": [
+        {
+          "author": "@Scobleizer",
+          "content": "California, nuove regole su #smartglasses e #privacy. Il Senate Bill 1130 introduce reati per chi registra nei negozi senza...",
+          "link": "https://x.com/Scobleizer/status/2027438396420067653"
+        }
+      ],
+      "timestamp": "2026-02-27T20:00:00Z",
+      "date": "2026-02-27"
     }
   ],
-  "lastUpdated": "2026-02-27T12:05:00Z",
-  "totalEvents": 10
+  "lastUpdated": "2026-02-27T20:00:00Z",
+  "totalEvents": 20
 }
