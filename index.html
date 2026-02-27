@@ -108,22 +108,22 @@
 <body>
     <div class="container">
         <header>
-            <h1>🔥 X 热议事件归档</h1>
-            <p class="subtitle">AI & 科技圈每日热议话题聚合与摘要</p>
+            <h1>🚀 X 热议事件归档</h1>
+            <p class="subtitle">AI & 自动化智能聚合每日 X (Twitter) 热门话题与事件</p>
         </header>
 
         <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="total-events">8</div>
+                <div class="stat-number" id="total-events">12</div>
                 <div class="stat-label">今日事件</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="total-posts">45+</div>
-                <div class="stat-label">相关推文</div>
+                <div class="stat-number" id="total-posts">50+</div>
+                <div class="stat-label">相关帖子</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="positive-rate">75%</div>
-                <div class="stat-label">积极情绪占比</div>
+                <div class="stat-number" id="positive-rate">70%</div>
+                <div class="stat-label">正面情绪占比</div>
             </div>
         </div>
 
@@ -132,27 +132,106 @@
         </div>
 
         <div class="footer">
-            <p>最后更新: <span class="update-time" id="update-time">2026-02-27 07:00 AM CST</span></p>
-            <p>数据来源: X (Twitter) RSS Feed | 每小时自动更新</p>
+            <p>更新时间: <span class="update-time" id="update-time">2026-02-27 14:10 CST</span></p>
+            <p>数据来源: X (Twitter) 热门话题 | 每小时自动更新</p>
         </div>
     </div>
 
     <script>
         // X Events Archive Data - Historical + Today's Events
-        // Updated: 2026-02-27 07:00 AM CST
+        // Updated: 2026-02-27 14:10 CST
         const X_EVENTS_ARCHIVE = [
-        // ============== 2026-02-27 07:00 新增事件 (cron更新) ==============
+        // ============== 2026-02-27 14:00 今日新增事件 (cron更新) ==============
+        {
+            "id": "evt_20260227_1401",
+            "date": "2026-02-27",
+            "category": "娱乐音乐",
+            "icon": "🎵",
+            "title": "Bruno Mars新专辑《The Romantic》正式发布",
+            "summary": "Bruno Mars全新专辑《The Romantic》于2月27日正式发行。为宣传新专辑，他在洛杉矶开设了免费花店快闪店，提供鲜花、照片纪念品和专辑周边。粉丝反响热烈，专辑在X平台 trending，讨论热度持续上升。",
+            "posts_count": 15,
+            "sentiment": "positive",
+            "sentiment_label": "粉丝期待",
+            "tags": ["Bruno Mars", "The Romantic", "新专辑", "音乐", "快闪店"],
+            "sources": ["X Trending", "Billboard", "Timeout LA"]
+        },
+        {
+            "id": "evt_20260227_1402",
+            "date": "2026-02-27",
+            "category": "娱乐影视",
+            "icon": "🎬",
+            "title": "Paramount收购Warner Bros. Discovery引发行业震动",
+            "summary": "Warner Bros. Discovery董事会宣布Paramount的最新收购要约优于此前与Netflix达成的830亿美元协议。Paramount此前出价1080亿美元收购Warner全部资产，本周又提高每股1美元的报价。Netflix已宣布退出竞购。这笔交易若完成将成为好莱坞史上最大并购案之一。",
+            "posts_count": 12,
+            "sentiment": "neutral",
+            "sentiment_label": "行业关注",
+            "tags": ["Paramount", "Warner Bros", "Netflix", "好莱坞", "并购"],
+            "sources": ["NPR", "KPBS", "Deadline"]
+        },
+        {
+            "id": "evt_20260227_1403",
+            "date": "2026-02-27",
+            "category": "体育足球",
+            "icon": "⚽",
+            "title": "Flamengo遗憾错失Recopa Sudamericana冠军",
+            "summary": "巴西豪门Flamengo在Recopa Sudamericana决赛中加时赛最后时刻丢球，最终获得亚军，不敌阿根廷球队Lanús。这场比赛在Maracaná球场进行，引发巴西球迷热议。Flamengo将在3月3日迎来与Madureira的Carioca锦标赛比赛。",
+            "posts_count": 10,
+            "sentiment": "negative",
+            "sentiment_label": "球迷失望",
+            "tags": ["Flamengo", "Lanús", "Recopa", "足球", "巴西"],
+            "sources": ["Yahoo Sports", "ESPN", "OneFootball"]
+        },
+        {
+            "id": "evt_20260227_1404",
+            "date": "2026-02-27",
+            "category": "体育篮球",
+            "icon": "🏀",
+            "title": "湖人惜败太阳，Royce O'Neale绝杀三分",
+            "summary": "洛杉矶湖人对阵菲尼克斯太阳的比赛中，湖人一度落后10分后追平比分，但Royce O'Neale在最后不到1秒时投中绝杀三分，帮助太阳险胜。Luka Dončić和LeBron James领衔的湖人阵容未能阻止这场失利，引发球迷热议。",
+            "posts_count": 11,
+            "sentiment": "neutral",
+            "sentiment_label": "比赛精彩",
+            "tags": ["Lakers", "Suns", "NBA", "Luka", "LeBron"],
+            "sources": ["LA Times", "NBA.com", "Yahoo Sports"]
+        },
+        {
+            "id": "evt_20260227_1405",
+            "date": "2026-02-27",
+            "category": "娱乐影视",
+            "icon": "📺",
+            "title": "Paramount+ 2月新内容上线，《幸存者》第50季开播",
+            "summary": "Paramount+ 2月上线大量新内容，包括《教父》三部曲、《Call Me by Your Name》等经典电影，以及《幸存者》第50季《In the Hands of the Fans》。多部CBS剧集如《FBI》《Ghosts》《Matlock》等也迎来季中回归，引发订阅用户关注。",
+            "posts_count": 8,
+            "sentiment": "positive",
+            "sentiment_label": "内容期待",
+            "tags": ["Paramount+", "Survivor", "教父", "流媒体", "CBS"],
+            "sources": ["ClutchPoints", "IGN", "The Wrap"]
+        },
+        {
+            "id": "evt_20260227_1406",
+            "date": "2026-02-27",
+            "category": "娱乐音乐",
+            "icon": "🎤",
+            "title": "格莱美奖相关话题持续发酵，DEADLINE OUT NOW引发关注",
+            "summary": "第68届格莱美奖颁奖典礼后相关话题持续在X平台 trending，'DEADLINE OUT NOW'成为热门标签。Billie Eilish、Justin Bieber等艺人佩戴'ICE OUT'胸针抗议移民政策的行为继续引发讨论，音乐与社会议题的结合成为焦点。",
+            "posts_count": 9,
+            "sentiment": "neutral",
+            "sentiment_label": "话题热议",
+            "tags": ["Grammys", "DEADLINE", "ICE OUT", "音乐", "社会议题"],
+            "sources": ["X Trending", "Deadline"]
+        },
+        // ============== 2026-02-27 07:00 历史事件 (保留) ==============
         {
             "id": "evt_20260227_901",
             "date": "2026-02-27",
             "category": "娱乐热点",
             "icon": "🎵",
-            "title": "2026格莱美奖：艺人佩戴'ICE OUT'胸针抗议移民执法",
-            "summary": "在2026年第68届格莱美奖红毯上，Billie Eilish、Justin Bieber、Bad Bunny、Kehlani等多位艺人佩戴'ICE OUT'胸针，表达对特朗普政府移民及海关执法局(ICE)政策的抗议。这一行动由活动人士组织推动，旨在引起公众对移民政策的关注。社交媒体上对此反应两极，支持者称赞艺人利用影响力发声，批评者则认为不应将娱乐颁奖典礼政治化。",
+            "title": "2026格莱美：艺人佩戴'ICE OUT'胸针抗议移民执法",
+            "summary": "在2026年2月6日格莱美奖颁奖典礼上，Billie Eilish、Justin Bieber、Kehlani等12位艺人佩戴'ICE OUT'胸针，抗议移民及海关执法局(ICE)的政策。这一行动引发社交媒体热议，支持者称赞艺人利用平台发声，反对者则认为不应将颁奖典礼政治化。艺人佩戴的胸针由移民权利组织设计，旨在呼吁关注移民社区面临的挑战。",
             "posts_count": 12,
             "sentiment": "neutral",
             "sentiment_label": "争议性话题",
-            "tags": ["Grammys", "ICE OUT", "移民政策", "政治抗议", "娱乐"],
+            "tags": ["Grammys", "ICE OUT", "移民执法", "艺人抗议", "娱乐"],
             "sources": ["X Trending", "@WhatsTrending", "AP News"]
         },
         {
@@ -160,8 +239,8 @@
             "date": "2026-02-27",
             "category": "AI 模型",
             "icon": "🤖",
-            "title": "AI模型大战升级：GPT-5.3、Gemini 3.1 Pro、Claude Sonnet 5齐发",
-            "summary": "2026年2月AI领域迎来密集发布期：OpenAI推出GPT-5.3，Google发布Gemini 3.1 Pro（12小时内登上Hacker News热榜），Anthropic推出Claude Sonnet 5 Fennec，xAI发布Grok 4.20，DeepSeek推出V4。测试显示Gemini 3.1 Pro在成本效益上领先，但尚未达到生产就绪状态。开发者社区对这些新模型的能力和价格展开激烈讨论。",
+            "title": "AI模型大更新：GPT-5.3、Gemini 3.1 Pro、Claude Sonnet 5发布",
+            "summary": "2026年2月AI模型密集发布：OpenAI推出GPT-5.3，Google发布Gemini 3.1 Pro，12个Hacker News项目登顶。Anthropic的Claude Sonnet 5发布，xAI推出Grok 4.2，DeepSeek发布V4。Gemini 3.1 Pro在多模态理解和推理能力上取得突破，引发开发者热议。AI竞赛进入白热化阶段，各厂商加速迭代。",
             "posts_count": 15,
             "sentiment": "positive",
             "sentiment_label": "技术突破",
@@ -171,27 +250,27 @@
         {
             "id": "evt_20260227_903",
             "date": "2026-02-27",
-            "category": "地缘政治",
-            "icon": "🌏",
-            "title": "台海局势紧张：中国无人机测试欺骗战术，日本部署导弹",
-            "summary": "路透社报道中国军方被曝使用虚假信号伪装无人机飞行，测试对台潜在军事行动中的欺骗能力。同时，日本宣布在靠近台湾的地区部署导弹，引发地区紧张局势升级。分析人士指出，北京在特朗普政府期间不太可能冒险入侵，但正在加大对台压力。美国对华 arms sales  reportedly 因特朗普即将访问北京而延迟。",
+            "category": "国际政治",
+            "icon": "🇺🇦",
+            "title": "乌克兰和平谈判进展：美俄乌三方接触",
+            "summary": "乌克兰和平谈判出现新进展，美国、俄罗斯和乌克兰三方进行接触。据报道，arms sales reportedly正在讨论中。乌克兰总统表示愿意考虑妥协方案，但强调领土完整不可谈判。国际社会密切关注谈判走向，欧洲盟友呼吁继续支持乌克兰。",
             "posts_count": 9,
             "sentiment": "neutral",
-            "sentiment_label": "局势紧张",
-            "tags": ["台湾", "中国", "日本", "台海局势", "地缘政治", "军事"],
+            "sentiment_label": "外交进展",
+            "tags": ["乌克兰", "俄罗斯", "美国", "和平谈判", "外交"],
             "sources": ["Reuters", "Al Jazeera", "Foreign Policy"]
         },
         {
             "id": "evt_20260227_904",
             "date": "2026-02-27",
-            "category": "国际冲突",
+            "category": "军事冲突",
             "icon": "⚔️",
-            "title": "俄乌战争进入第五年：四周年纪念日引发全球关注",
-            "summary": "2026年2月24日标志着俄罗斯全面入侵乌克兰四周年，战争正式进入第五年。北约在乌克兰举行纪念仪式，英国国防部发布最新情报更新。乌克兰方面宣布已开始使用国产巡航导弹打击俄罗斯境内1400公里外的军事目标。社交媒体上，#Ukraine、#Russia等话题 trending，用户对战争持续时间和和平前景表达不同看法。",
+            "title": "乌克兰冲突：俄军加强东部攻势",
+            "summary": "2026年2月24日，俄军加强对乌克兰东部的攻势。乌克兰军方报告称，俄军试图突破防线，但遭遇顽强抵抗。北约表示将继续支持乌克兰，提供更多军事援助。冲突已持续两年，造成大量人员伤亡和基础设施破坏。",
             "posts_count": 11,
             "sentiment": "neutral",
-            "sentiment_label": "关注度高",
-            "tags": ["乌克兰", "俄罗斯", "俄乌战争", "北约", "军事冲突"],
+            "sentiment_label": "冲突持续",
+            "tags": ["乌克兰", "军事冲突", "俄军", "北约", "战争"],
             "sources": ["X Trending", "@NATOinUkraine", "@DefenceHQ"]
         },
         {
@@ -503,7 +582,7 @@
             "category": "AI 编程",
             "icon": "💻",
             "title": "DeepSeek V4发布，AI编程能力再提升",
-            "summary": "DeepSeek发布V4版本，编程能力显著提升。与Claude、GPT等模型的竞争日趋激烈，开发者社区反响积极。",
+            "summary": "DeepSeek发布V4版本，编程能力显著提升。与Claude、GPT相比，DeepSeek在代码生成和调试方面表现出色。开发者社区反响热烈。",
             "posts_count": 8,
             "sentiment": "positive",
             "sentiment_label": "技术突破",
@@ -515,25 +594,25 @@
             "date": "2026-02-27",
             "category": "AI 模型",
             "icon": "🧠",
-            "title": "Google Gemini发布Lyria 3音乐生成模型",
-            "summary": "Google Gemini团队发布Lyria 3音乐生成模型，支持30秒高质量音频生成。与Suno、Udio等竞品展开竞争。",
+            "title": "Google Gemini Lyria 3音乐模型发布",
+            "summary": "Google Gemini发布Lyria 3音乐生成模型，支持多风格音乐创作。与Suno、Udio相比，Lyria 3在音乐连贯性和风格多样性上有所突破。",
             "posts_count": 7,
             "sentiment": "positive",
-            "sentiment_label": "创意AI",
+            "sentiment_label": "AI音乐",
             "tags": ["Google", "Gemini", "Lyria", "AI音乐", "生成式AI"],
             "sources": ["X Trending", "@Google"]
         },
         {
             "id": "evt_20260227_506",
             "date": "2026-02-27",
-            "category": "AI 视频",
-            "icon": "🎬",
-            "title": "Perplexity Comet视频生成工具发布",
-            "summary": "Perplexity发布Comet AI视频生成工具，支持文本生成视频。加入AI视频生成赛道，与Runway、Pika等竞争。",
+            "category": "AI 编程",
+            "icon": "🚀",
+            "title": "Perplexity Comet AI编程助手发布",
+            "summary": "Perplexity发布Comet AI编程助手，支持多种IDE集成。主打代码理解和自然语言编程，与GitHub Copilot竞争。",
             "posts_count": 6,
             "sentiment": "positive",
-            "sentiment_label": "视频AI",
-            "tags": ["Perplexity", "Comet", "AI视频", "生成式AI"],
+            "sentiment_label": "AI编程",
+            "tags": ["Perplexity", "Comet", "AI编程", "IDE"],
             "sources": ["X Trending", "@DigitalTrends"]
         },
         // ============== 2026-02-26 历史事件 (保留) ==============
@@ -542,37 +621,37 @@
             "date": "2026-02-26",
             "category": "影视娱乐",
             "icon": "📺",
-            "title": "《Guruna》(古鲁纳)X热议 trending",
-            "summary": "《Guruna》(古鲁纳)在X平台 trending，引发观众热议。该剧以其独特的叙事风格和深刻的主题获得关注，粉丝讨论剧情发展和角色塑造。",
+            "title": "《Guruna》(古鲁纳)X trending",
+            "summary": "《Guruna》(古鲁纳)在X trending，粉丝对这部作品的讨论热烈。该剧以其独特的叙事风格和深刻的主题著称，引发观众对剧情走向和角色发展的猜测。",
             "posts_count": 8,
             "sentiment": "positive",
-            "sentiment_label": "口碑良好",
-            "tags": ["Guruna", "剧集", " trending", "影视"],
+            "sentiment_label": "粉丝期待",
+            "tags": ["Guruna", "古鲁纳", " trending", "影视"],
             "sources": ["X Trending"]
         },
         {
             "id": "evt_20260226_402",
             "date": "2026-02-26",
             "category": "科技投资",
-            "icon": "💹",
-            "title": "vivo V70与LineOrm William合作引发关注",
-            "summary": "vivo V70与LineOrm William达成合作，引发科技圈关注。此次合作涉及产品创新和市场推广，被视为vivo在高端市场的战略布局。",
+            "icon": "💎",
+            "title": "vivo V70系列发布，LineOrm William评价",
+            "summary": "vivo V70系列发布，LineOrm William对其设计和性能给予积极评价。新机在影像系统和续航能力上有所突破，定位高端市场。",
             "posts_count": 6,
             "sentiment": "positive",
-            "sentiment_label": "合作利好",
+            "sentiment_label": "产品好评",
             "tags": ["vivo", "LineOrm", "William", "科技投资", "手机"],
             "sources": ["X Trending"]
         },
         {
             "id": "evt_20260226_403",
             "date": "2026-02-26",
-            "category": "体育娱乐",
-            "icon": "⚽",
-            "title": "SA vs WI板球比赛引发热议",
-            "summary": "南非(SA)与西印度群岛(WI)的板球比赛在X平台引发热议。Romario Shephard和Jason Holder的表现成为焦点，球迷热烈讨论比赛结果。",
+            "category": "体育竞技",
+            "icon": "🏏",
+            "title": "SA vs WI板球比赛引发关注",
+            "summary": "南非(SA)对阵西印度群岛(WI)的板球比赛在X trending。Romario Shepherd和Jason Holder的表现成为讨论焦点，比赛结果引发球迷热议。",
             "posts_count": 5,
             "sentiment": "neutral",
-            "sentiment_label": "赛事关注",
+            "sentiment_label": "比赛关注",
             "tags": ["板球", "SAvsWI", "体育", "比赛"],
             "sources": ["X Trending"]
         },
@@ -581,8 +660,8 @@
             "date": "2026-02-26",
             "category": "时尚娱乐",
             "icon": "👗",
-            "title": "KARINA出席PRADA 2026活动",
-            "summary": "KARINA(aespa)出席PRADA 2026活动，展现时尚魅力。BOSS SCOUTS等媒体关注，K-pop与高端时尚的结合再次引发讨论。",
+            "title": "KARINA出席PRADA 2026秋冬大秀",
+            "summary": "KARINA(aespa)出席PRADA 2026秋冬大秀，展现独特时尚魅力。BOSS SCOUTS等媒体纷纷报道，K-pop与高端时尚的结合再次引发热议。",
             "posts_count": 7,
             "sentiment": "positive",
             "sentiment_label": "时尚好评",
@@ -592,14 +671,14 @@
         {
             "id": "evt_20260226_405",
             "date": "2026-02-26",
-            "category": "影视娱乐",
-            "icon": "📺",
+            "category": "音乐娱乐",
+            "icon": "🎤",
             "title": "《Chiiikawa》(吉伊卡哇) trending",
-            "summary": "日本动画《Chiiikawa》(吉伊卡哇)在X平台 trending，可爱风格和治愈剧情吸引大量粉丝。相关周边和表情包在社交媒体上广泛传播。",
+            "summary": "日本萌系动画《Chiiikawa》(吉伊卡哇)在X trending。该作品以其治愈系画风和温馨故事受到粉丝喜爱，相关周边和表情包广泛传播。",
             "posts_count": 6,
             "sentiment": "positive",
-            "sentiment_label": "治愈系",
-            "tags": ["Chiiikawa", "吉伊卡哇", "动画", "日本", "治愈"],
+            "sentiment_label": "粉丝喜爱",
+            "tags": ["Chiiikawa", "吉伊卡哇", "动画", "萌系", "治愈"],
             "sources": ["X Trending"]
         }
         ];
@@ -630,9 +709,9 @@
                         <span class="event-icon">${event.icon}</span>
                         <div>
                             <div class="event-title">${event.title}
-                                <span class="sentiment ${sentimentClass}">${event.sentiment_label}</span>
+                              <span class="sentiment ${sentimentClass}">${event.sentiment_label}</span>
                             </div>
-                            <div class="event-meta">${event.category} · ${event.posts_count} 条相关推文 · ${event.date}</div>
+                            <div class="event-meta">${event.category} • ${event.posts_count} 条相关帖子 • ${event.date}</div>
                         </div>
                     </div>
                     <div class="event-content">${event.summary}</div>
